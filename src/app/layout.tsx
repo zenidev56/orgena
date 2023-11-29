@@ -1,6 +1,8 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import './globals.css';
+
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Script src='https://kit.fontawesome.com/66eaecb2cd.js' />
       <body className={inter.className}>{children}</body>
     </html>
   )
