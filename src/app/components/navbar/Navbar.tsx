@@ -18,62 +18,35 @@ const Navbar = () => {
 
   return (
     <>
-    <div className={styles.header}>
-      <div className={styles.logoNav}>
+    <div className={styles.mainHeader}>
+      <div className={styles.logoSection}>
         <div className={styles.logoContainer} >
           <Link href="#" className={styles.logoLink}>
             <div className={styles.logo} >
               <Image src={Logo} alt='Logo' />
             </div>
-            <p>Care Physiotherapy</p>
+            <p className={styles.logoName}>Care Physiotherapy</p>
           </Link>
         </div>
-        {/* <ul className={` ${styles.navOptions} ${click ? styles.active: ''}`}>
-          <li className={styles.option} onClick={closeMobileMenu}>
-            <a href="#">ABOUT</a>
-          </li>
-          <li className={styles.option} onClick={closeMobileMenu}>
-            <a href="#">CONTACT</a>
-          </li>
-          <li className={styles.option} onClick={closeMobileMenu}>
-            <a href="#">BLOG</a>
-          </li>
-          <li className={`${styles.option} ${styles.mobileOption}`} onClick={closeMobileMenu}>
-            <a href="#">SIGN-IN</a>
-          </li>
-          <li  className={`${styles.option} ${styles.mobileOption}`} onClick={closeMobileMenu}>
-            <a href="" className={styles.signUp}>
-              SIGN-UP
-            </a>
-          </li>
-        </ul> */}
       </div>
-      <ul className={styles.signinUp}>
-        {/* <li className={styles.signIn} onClick={closeMobileMenu}>
-          <a href="#">SIGN-IN</a>
-        </li>
-        <li onClick={closeMobileMenu}>
-          <a href="" className={styles.signupBtn}>
-            SIGN-UP
-          </a>
-        </li> */}
+      <ul className={styles.contactContainer}>
         <li className={styles.siteContact} onClick={() => router.push(`/call/+917738715012`)}>
-          <i className="fa-solid fa-phone"></i>
-          <div className={styles.freeCall}>
+          <i className={`fa-solid fa-phone ${styles.iconColor}`}></i>
+          <div>
             <p>Free Call</p>
             <p>+91 7738715012</p>
           </div>
         </li>
-        <li className={styles.siteContact} onClick={() => router.push(`/call/+917738715012`)}>
-        <i className="fa-solid fa-clock"></i>
-          <div className={styles.freeCall}>
+        <li className={styles.siteContact} >
+        <i className={`fa-solid fa-clock ${styles.iconColor}`}></i>
+          <div>
             <p>drjuliepawar@gmail.com</p>
             <p>Visit us Daily 9.00 AM - 9.00 PM</p>
           </div>
         </li>
-        <li className={styles.siteContact} onClick={() => router.push(`/call/+917738715012`)}>
-        <i className="fa-solid fa-location-dot"></i>
-          <div className={styles.freeCall}>
+        <li className={styles.siteContact}>
+        <i className={`fa-solid fa-location-dot ${styles.iconColor}`}></i>
+          <div>
             <p>Address Center</p>
             <p>Ramdev Park,Mira Road,401107 </p>
           </div>
@@ -89,31 +62,33 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-    <div className={styles.header2}>
-      <div className={styles.logoNav}>
-        <ul className={` ${styles.navOptions} ${click ? styles.active: ''}`}>
-          <li className={styles.option} onClick={closeMobileMenu}>
-            <a href="#">Home</a>
-          </li>
-          <li className={styles.option} onClick={closeMobileMenu}>
-            <a href="#">About Us</a>
-          </li>
-          <li className={styles.option} onClick={closeMobileMenu}>
-            <a href="#">Services</a>
-          </li>
-          <li className={`${styles.option}`} onClick={closeMobileMenu}>
-            <a href="#">Case Studies</a>
-          </li>
-          <li className={`${styles.option}`} onClick={closeMobileMenu}>
-            <a href="#">SIGN-IN</a>
-          </li>
-          <li className={`${styles.option} `} onClick={closeMobileMenu}>
-            <a href="#">Testinomials</a>
+    <div className={styles.secondaryHeader}>
+      <div>
+        <ul className={` ${styles.actionLinks} ${click ? styles.active: ''}`}>
+          <li className={styles.actionLinksContainer}>
+            <li className={styles.option} onClick={closeMobileMenu}>
+              <a href="#">Home</a>
+            </li>
+            <li className={styles.option} onClick={closeMobileMenu}>
+              <a href="#">About Us</a>
+            </li>
+            <li className={styles.option} onClick={closeMobileMenu}>
+              <a href="#">Services</a>
+            </li>
+            <li className={`${styles.option}`} onClick={closeMobileMenu}>
+              <a href="#">Case Studies</a>
+            </li>
+            <li className={`${styles.option}`} onClick={closeMobileMenu}>
+              <a href="#">SIGN-IN</a>
+            </li>
+            <li className={`${styles.option} `} onClick={closeMobileMenu}>
+              <a href="#">Testinomials</a>
+            </li>
           </li>
           <li  className={`${styles.option} ${styles.mobileOption}`} onClick={closeMobileMenu}>
-            <a href="" className={styles.signUp}>
+            <button className={styles.appointmentBtn}>
               Make an Appointment Today
-            </a>
+            </button>
           </li>
         </ul>
       </div>
