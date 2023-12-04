@@ -1,0 +1,34 @@
+.flippyContainer {
+  width: 300px;
+  box-shadow: none;
+}
+.physiotherapy-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 !important;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-description {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.readmore-btn {
+  margin-top: 0.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+}
