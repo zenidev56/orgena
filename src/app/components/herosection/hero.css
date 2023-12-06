@@ -182,4 +182,11 @@
     height: 60px;
     margin-bottom: 1rem;
   }
+  .delivered-meals {
+    flex-direction: column;
+    align-items: self-start;
+  }
+  .delivered-imgs {
+    display: flex;
+  }
 }

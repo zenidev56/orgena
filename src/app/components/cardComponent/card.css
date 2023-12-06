@@ -32,3 +32,8 @@
   color: var(--primary-color);
   font-weight: bold;
 }
+.flippy-front,
+.flippy-back {
+  padding: 0rem !important;
+  box-shadow: none !important;
+}

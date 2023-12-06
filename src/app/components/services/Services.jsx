@@ -4,7 +4,7 @@ import React from "react";
 
 import ServiceImg1 from "/public/img2.jpg";
 
-import Card from "../card/Card";
+import CardComponent from "../cardComponent/CardComponent";
 
 const Services = () => {
   return (
@@ -17,19 +17,22 @@ const Services = () => {
         </p>
       </div>
       <div className="services-cards">
-        <Card
+        <CardComponent
           title="Joint Pain"
-          description="It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop..."
+          description=": The flu is a contagious respiratory illness
+        caused by the influenza virus"
           image={ServiceImg1}
         />
-        <Card
+        <CardComponent
           title="Joint Pain"
-          description="It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop..."
+          description=": The flu is a contagious respiratory illness
+        caused by the influenza virus"
           image={ServiceImg1}
         />
-        <Card
+        <CardComponent
           title="Joint Pain"
-          description="It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop..."
+          description=": The flu is a contagious respiratory illness
+        caused by the influenza virus"
           image={ServiceImg1}
         />
       </div>

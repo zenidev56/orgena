@@ -46,6 +46,8 @@
 @media (max-width: 1105px) {
   .about-container {
     flex-direction: column-reverse;
+    padding: 0rem 1rem;
+    margin-bottom: 3.4rem;
   }
   .about-info {
     width: 100%;

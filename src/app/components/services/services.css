@@ -26,7 +26,8 @@
 }
 @media (max-width: 1038px) {
   .services-container {
-    padding: 0rem 2rem;
+    padding: 0rem 1rem;
+    margin-bottom: 3.4rem;
   }
   .service-primary {
     font-size: 4rem;

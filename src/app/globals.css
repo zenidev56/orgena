@@ -13,11 +13,11 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
-    --primary-text-color: #000; 
+    --primary-text-color: #000;
     --secondary-text-color: #878080;
     --primary-color: #091846;
-    --secondary-color: #4993FA;
-    --tertiary-color: #F4F4F4;
+    --secondary-color: #4993fa;
+    --tertiary-color: #f4f4f4;
     --white-color: #fff;
     --black-color: #000;
   }

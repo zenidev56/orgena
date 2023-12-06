@@ -120,6 +120,9 @@
 
 @media (max-width: 1105px) {
   /*Mobile View */
+  .mainHeader {
+    padding: 0px;
+  }
   .header {
     padding: 0px 10px;
   }
@@ -128,9 +131,10 @@
     height: 70px;
   }
   .secondaryHeader {
-    position: relative;
-    top: -75px;
-    z-index: 3;
+    position: absolute;
+    top: 0px;
+    z-index: 4;
+    width: 100%;
   }
   .actionLinks {
     display: flex;
