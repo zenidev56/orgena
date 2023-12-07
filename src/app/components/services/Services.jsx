@@ -3,6 +3,7 @@ import "./services.css";
 import React from "react";
 
 import ServiceImg1 from "/public/img2.jpg";
+import { Button } from "flowbite-react";
 
 import CardComponent from "../cardComponent/CardComponent";
 
@@ -35,6 +36,9 @@ const Services = () => {
         caused by the influenza virus"
           image={ServiceImg1}
         />
+      </div>
+      <div className="flex justify-end my-5">
+        <Button color="blue">View more</Button>
       </div>
     </div>
   );

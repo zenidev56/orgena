@@ -14,7 +14,7 @@ const CardComponent = ({ title, description, image }) => {
     <>
       <Flippy
         flipOnHover={true} // default false
-        flipOnClick={false} // default false
+        flipOnClick={true} // default false
         flipDirection="horizontal" // horizontal or vertical
         ref={ref} // to use toggle method like ref.curret.toggle()
         // if you pass isFlipped prop component will be controlled component.
@@ -29,10 +29,6 @@ const CardComponent = ({ title, description, image }) => {
               <Image width={500} height={500} src={image} alt="image 1" />
             )}
           >
-            {/* Title: Flu Definition: The flu is a contagious respiratory illness
-        caused by the influenza virus. Symptoms: Fever, cough, sore throat,
-        runny or stuffy nose, muscle aches, headache, fatigue, and diarrhea.
-        Image: A picture of a person with the flu. */}
             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
               {title}
             </h5>
@@ -58,7 +54,7 @@ const CardComponent = ({ title, description, image }) => {
             </span>{" "}
             <ul className="my-1 space-y-5">
               <li className="flex space-x-3">
-                <svg
+                {/* <svg
                   className="h-5 w-5 shrink-0 text-cyan-600 dark:text-cyan-500"
                   fill="currentColor"
                   viewBox="0 0 20 20"
@@ -68,6 +64,21 @@ const CardComponent = ({ title, description, image }) => {
                     fillRule="evenodd"
                     d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                     clipRule="evenodd"
+                  />
+                </svg> */}
+                <svg
+                  class="w-6 h-6 text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="blak"
+                  viewBox="0 0 10 16"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m2.707 14.293 5.586-5.586a1 1 0 0 0 0-1.414L2.707 1.707A1 1 0 0 0 1 2.414v11.172a1 1 0 0 0 1.707.707Z"
                   />
                 </svg>
                 <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">
@@ -76,15 +87,18 @@ const CardComponent = ({ title, description, image }) => {
               </li>
               <li className="flex space-x-3">
                 <svg
-                  className="h-5 w-5 shrink-0 text-cyan-600 dark:text-cyan-500"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
+                  class="w-6 h-6 text-gray-800 dark:text-white"
+                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
+                  fill="blak"
+                  viewBox="0 0 10 16"
                 >
                   <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m2.707 14.293 5.586-5.586a1 1 0 0 0 0-1.414L2.707 1.707A1 1 0 0 0 1 2.414v11.172a1 1 0 0 0 1.707.707Z"
                   />
                 </svg>
                 <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">
@@ -93,22 +107,25 @@ const CardComponent = ({ title, description, image }) => {
               </li>
               <li className="flex space-x-3">
                 <svg
-                  className="h-5 w-5 shrink-0 text-cyan-600 dark:text-cyan-500"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
+                  class="w-6 h-6 text-gray-800 dark:text-white"
+                  aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
+                  fill="blak"
+                  viewBox="0 0 10 16"
                 >
                   <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m2.707 14.293 5.586-5.586a1 1 0 0 0 0-1.414L2.707 1.707A1 1 0 0 0 1 2.414v11.172a1 1 0 0 0 1.707.707Z"
                   />
                 </svg>
                 <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">
                   Unable to take hand to back pocket
                 </span>
               </li>
-              <li className="flex space-x-3 line-through decoration-gray-500">
+              <li className="flex space-x-3 decoration-gray-500">
                 <svg
                   class="w-6 h-6 text-gray-800 dark:text-white"
                   aria-hidden="true"

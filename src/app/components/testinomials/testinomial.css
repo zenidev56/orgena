@@ -1,0 +1,49 @@
+.testinomial-container {
+  padding: 3.4rem 5.6rem;
+  height: 35rem;
+  text-align: center;
+}
+.fa-star {
+  color: var(--secondary-color);
+}
+.testinomial-primary {
+  font-size: 5.2rem;
+  color: #333;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+.testinomial-secondary {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+.testinomial-description {
+  color: var(--secondary-text-color);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.carosel-container > div:nth-child(2),
+.carosel-container > div:last-child {
+  padding: 0px;
+}
+.carosel-container > div:nth-child(2) {
+  left: -1.5rem;
+}
+.carosel-container > div:last-child {
+  right: -1.5rem;
+}
+@media (max-width: 500px) {
+  .testinomial-container {
+    padding: 0rem 1rem;
+    height: 35rem;
+  }
+  .testinomial-primary {
+    font-size: 4rem;
+  }
+  .testinomial {
+    font-size: 14px;
+  }
+}
