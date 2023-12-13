@@ -26,4 +26,5 @@
 body {
   color: rgb(var(--primary-text-color));
   /* padding: 1rem; */
+  scroll-behavior: smooth;
 }

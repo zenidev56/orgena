@@ -2,7 +2,11 @@
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 import About from './components/aboutus/About';
-import ContactSection from './components/contactsection/ContactSection';
+import ContactHero from './components/contactHero/ContactHero';
+import Contact from './components/contactus/Contact';
+import Cta from './components/cta/Cta';
+import Faq from './components/faq/Faq';
+import Footer from './components/footer/Footer';
 import Hero from './components/herosection/Hero';
 import Navbar from './components/navbar/Navbar';
 import Services from './components/services/Services';
@@ -14,11 +18,15 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <ContactHero />
       <Services />
       <Testinomials />
+      <Contact />
       <ParallaxProvider scrollAxis='vertical'>
-        <ContactSection />
-
+        {/* <ContactSection /> */}
+        <Cta />
+        <Faq />
+      <Footer />
       </ParallaxProvider>
     </main>
   )
