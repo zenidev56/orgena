@@ -9,7 +9,7 @@ import Image from "next/image";
 const Testinomials = () => {
   return (
     <div>
-      <div className="sm:h-64 xl:h-80 2xl:h-96 flex justify-center flex-col items-center testinomial-container mx-4	">
+      <div className="sm:h-64 xl:h-80 2xl:h-96 flex justify-center flex-col items-left testinomial-container mx-4	">
         <h4 className="testinomial-secondary">WHAT HAPPY CLIENTS SAY</h4>
         <h2 className="testinomial-primary"> Testinomials</h2>
         <p className="testinomial-description">
@@ -23,9 +23,9 @@ const Testinomials = () => {
           indicators={false}
           className="carosel-container"
           leftControl={
-            <div className="p-1 border rounded-full  bg-slate-300	">
+            <div className="p-1 border rounded-full  bg-slate-300	items-center">
               <svg
-                class="w-4 h-4 text-gray-800 dark:text-white"
+                className="w-4 h-4 text-gray-800 dark:text-white"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -33,9 +33,9 @@ const Testinomials = () => {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M7 1 1.3 6.326a.91.91 0 0 0 0 1.348L7 13"
                 />
               </svg>
@@ -44,7 +44,7 @@ const Testinomials = () => {
           rightControl={
             <div className="p-1 border rounded-full  bg-slate-300	">
               <svg
-                class="w-4 h-4 text-gray-800 dark:text-white"
+                className="w-4 h-4 text-gray-800 dark:text-white"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -52,9 +52,9 @@ const Testinomials = () => {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"
                 />
               </svg>

@@ -21,7 +21,7 @@ const Navbar = () => {
     <div className={styles.mainHeader}>
       <div className={styles.logoSection}>
         <div className={styles.logoContainer} >
-          <Link href="#" className={styles.logoLink}>
+          <Link href="/" className={styles.logoLink}>
             <div className={styles.logo} >
               <Image src={Logo} alt='Logo' />
             </div>
@@ -65,30 +65,35 @@ const Navbar = () => {
     <div className={styles.secondaryHeader}>
       <div>
         <ul className={` ${styles.actionLinks} ${click ? styles.active: ''}`}>
-          <li className={styles.actionLinksContainer}>
+          <div className={styles.actionLinksContainer}>
             <li className={styles.option} onClick={closeMobileMenu}>
-              <a href="#">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li className={styles.option} onClick={closeMobileMenu}>
-              <a href="#">About Us</a>
+              <Link href="/founder">Our Founder</Link>
             </li>
             <li className={styles.option} onClick={closeMobileMenu}>
-              <a href="#">Services</a>
+              <Link href="#about">About Us</Link>
+            </li>
+            <li className={styles.option} onClick={closeMobileMenu}>
+              <Link href="#service">Conditions we Treat</Link>
+            </li>
+            <li className={styles.option} onClick={closeMobileMenu}>
+              <Link href="#choose-us">Why Choose Us</Link>
             </li>
             <li className={`${styles.option}`} onClick={closeMobileMenu}>
-              <a href="#">Case Studies</a>
-            </li>
-            <li className={`${styles.option}`} onClick={closeMobileMenu}>
-              <a href="#">SIGN-IN</a>
+              <Link href="#case-studies">Case Studies</Link>
             </li>
             <li className={`${styles.option} `} onClick={closeMobileMenu}>
-              <a href="#">Testinomials</a>
+              <Link href="#testimonials">Testimonials</Link>
             </li>
-          </li>
+          </div>
           <li  className={`${styles.option} ${styles.mobileOption}`} onClick={closeMobileMenu}>
+                <Link href="#contact">
             <button className={styles.appointmentBtn}>
-              Make an Appointment Today
+            Make an Appointment Today
             </button>
+                </Link>
           </li>
         </ul>
       </div>

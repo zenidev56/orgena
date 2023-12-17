@@ -7,7 +7,7 @@
 }
 .about-primary {
   font-size: 5.2rem;
-  color: #333;
+  color: var(--primary-text-color);
   font-weight: 700;
   letter-spacing: -0.5px;
   line-height: 1.05;
@@ -47,7 +47,7 @@
   .about-container {
     flex-direction: column-reverse;
     padding: 0rem 1rem;
-    margin-bottom: 3.4rem;
+    margin-bottom: 2.5rem;
   }
   .about-info {
     width: 100%;

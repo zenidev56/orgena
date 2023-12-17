@@ -1,0 +1,36 @@
+.contact-primary {
+  font-size: 5.2rem;
+  color: var(--primary-text-color);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+.contact-secondary {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+.contact-description {
+  color: var(--secondary-text-color);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 500px) {
+  .contact-container {
+    padding: 0rem 1rem;
+    height: 35rem;
+    margin-bottom: 2.5rem;
+  }
+  .contact-primary {
+    font-size: 3rem;
+  }
+  .contact {
+    font-size: 14px;
+  }
+  .condition-option {
+    max-width: 300px;
+  }
+}

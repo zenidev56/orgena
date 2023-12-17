@@ -17,7 +17,7 @@
 
 .heading-primary {
   font-size: 5.2rem;
-  color: #333;
+  color: var(--primary-text-color);
   font-weight: 700;
   letter-spacing: -0.5px;
   line-height: 1.05;
@@ -148,7 +148,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 50px;
     margin-bottom: 2rem;
   }
   .delivered-meals {
@@ -160,6 +160,12 @@
   }
 }
 @media (max-width: 500px) {
+  .section-hero {
+    padding: 0rem 0 2.5rem 0;
+  }
+  .delivered-meals {
+    gap: 1rem;
+  }
   .hero {
     display: flex;
     flex-direction: column;
@@ -186,7 +192,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 50px;
     margin-bottom: 1rem;
   }
 }

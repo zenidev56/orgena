@@ -1,0 +1,34 @@
+.choose-container {
+  padding: 0 3.2rem;
+}
+.choose-primary {
+  font-size: 5.2rem;
+  color: var(--primary-text-color);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+.choose-description {
+  font-size: 2rem;
+}
+.choose-card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+@media (max-width: 500px) {
+  .choose-primary {
+    font-size: 3rem;
+  }
+  .choose-description {
+    font-size: 1rem;
+  }
+  .choose-container {
+    padding: 0 1rem;
+    margin-bottom: 2.5rem;
+  }
+}

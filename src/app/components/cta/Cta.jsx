@@ -15,6 +15,7 @@ const Cta = () => {
           backgroundPosition: "center center",
           backgroundBlendMode: "multiply",
           backgroundSize: "cover",
+          marginBottom: "2.5rem",
         }}
       >
         <div className="container flex flex-col flex-wrap content-center justify-center p-7 py-20 mx-auto md:p-15">

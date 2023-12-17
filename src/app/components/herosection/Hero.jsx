@@ -2,14 +2,21 @@
 
 import "./hero.css";
 
-import React from "react";
+import React, { useState } from "react";
 
 import HeroImage from "/public/Content.jpg";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 ("use-client");
 
+const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
+const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
+
 const Hero = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
   return (
     <div>
       <section className="section-hero">
@@ -24,20 +31,36 @@ const Hero = () => {
               wellness.
             </p>
             <div className="hero-action-btn">
-              <a href="#" className="btn btn--fill margin-right-btn">
+              <Link href="#contact" className="btn btn--fill margin-right-btn">
                 Get Help
-              </a>
-              <a href="#" className="btn btn--outline margin-right-btn">
+              </Link>
+              <Link
+                href="/founder"
+                className="btn btn--outline margin-right-btn"
+              >
                 Learn more &darr;
-              </a>
+              </Link>
             </div>
           </div>
           <div className="hero-img-box">
-            <Image
-              src={HeroImage}
-              alt="Woman enjoying food, meals in storage container, and food bowls on a table"
-              className="hero-img"
-            />
+            <motion.div
+              initial={false}
+              animate={
+                isLoaded && isInView
+                  ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
+                  : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
+              }
+              transition={{ duration: 1, delay: 1 }}
+              viewport={{ once: true }}
+              onViewportEnter={() => setIsInView(true)}
+            >
+              <Image
+                src={HeroImage}
+                alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+                className="hero-img"
+                onLoad={() => setIsLoaded(true)}
+              />
+            </motion.div>
           </div>
           <div className="delivered-meals">
             <div className="delivered-imgs">

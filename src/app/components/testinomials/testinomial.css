@@ -1,14 +1,13 @@
 .testinomial-container {
   padding: 3.4rem 5.6rem;
   height: 35rem;
-  text-align: center;
 }
 .fa-star {
   color: var(--secondary-color);
 }
 .testinomial-primary {
   font-size: 5.2rem;
-  color: #333;
+  color: var(--primary-text-color);
   font-weight: 700;
   letter-spacing: -0.5px;
   line-height: 1.05;
@@ -39,11 +38,13 @@
   .testinomial-container {
     padding: 0rem 1rem;
     height: 35rem;
+    margin-bottom: 2.5rem;
   }
   .testinomial-primary {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .testinomial {
     font-size: 14px;
+    text-align: center;
   }
 }
