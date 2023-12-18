@@ -16,13 +16,13 @@ const WhyChooseUs = () => {
     {
       title: "Advanced Proven Procedures",
       description:
-        "Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Sed fringilla mauris sit amet nibh.",
+        "Thin needles target muscle knots, easing pain and boosting recovery.",
       url: FeatureImg1,
     },
     {
       title: "Most Effective Treatment",
       description:
-        "Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Sed fringilla mauris sit amet nibh.",
+        "Modern PT packs a punch! Needle knots goodbye with Dry Needling, learn to manage pain with Biofeedback, and explore other cutting-edge tools.",
       url: FeatureImg2,
     },
     {

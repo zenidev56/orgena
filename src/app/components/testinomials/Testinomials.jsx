@@ -2,11 +2,44 @@ import "./testinomial.css";
 
 import React from "react";
 
-import Profile from "/public/profile.jpg";
+import Profile from "../../../../public/profile.jpg";
+import AshishProfile from "../../../../public/profile2.png";
+import ZoyaProfile from "../../../../public/zoya-profile.jpeg";
+import SnehaProfile from "../../../../public/sneha-profile.jpg";
+import NishitaProfile from "../../../../public/nishita-profile.jpg";
+import VictoriaProfile from "../../../../public/victoria-profile.jpg";
 import { Avatar, Carousel } from "flowbite-react";
 import Image from "next/image";
 
 const Testinomials = () => {
+  const testinomials = [
+    {
+      description: "I have experienced very good session.And Dr Julie was very excellent in all the manner.Almost my pain has gone.So a very thanks to Dr Julie.I wish all the best to ehr in future and god bless her.",
+      name: "Zoya Warsi",
+      img: ZoyaProfile
+    },
+    {
+      description: "One of the best physiotherapist I've ever met. Perfect diagnosis. And excellent treatment. With her treatment my long term back and neck pain  But with her diagnosis and treatment now I can walk, run and do all the other activities. Highly recommended. ✌💯💐",
+      name: "Ashish Mishra",
+      img: AshishProfile
+    },
+    {
+      description: "I was suffering from bells pulsy from last 15 days..i came to to dr. Vigils clinic...Dr. Julie did a great job with my health issue. She explained everything to me in a very clear manner....she recover me in just a 15 days.... She was also kind and friendly. It was a great experience...I am happy with my treatmemt",
+      name: "Sneha Khedekar",
+      img: SnehaProfile
+    },
+    {
+      description: "I have observed her, she has some unique qualities while treating her patients. She gets to know the details of patient, her history of physical problems and medicines, etc and slowly starts to examining the area of physiotherapy to be undertaken. She talks to patients politely and starts her job of movements/mobility of the affected area so that patients doesn't feel pain.",
+      name: "Victoria Nadar",
+      img: VictoriaProfile
+    },
+    {
+      description: "Dr. Julie is amazing in her field, she is so calm and polite she listens to each and every detail and acts accordingly My grandmother was diagnosed with bilateral pneumonia and the doctors had given up on her She was on oxygen and bipap and was loosing hope Dr. Julie was a lifesaver she listened to all of her problems was always pushing her to do just a bit more, helped her gain her confidence back and finally she's doing so much better. She is a balance of being fun and relaxed while being strict at times. Will always be grateful to her.",
+      name: "Nishita Verma",
+      img: NishitaProfile
+    }
+
+  ]
   return (
     <div>
       <div className="sm:h-64 xl:h-80 2xl:h-96 flex justify-center flex-col items-left testinomial-container mx-4	">
@@ -61,14 +94,17 @@ const Testinomials = () => {
             </div>
           }
         >
-          <div className="flex justify-center flex-col items-center">
+          {
+            testinomials.map((testinomial,index) => {
+              return <>
+                   <div className="flex justify-center flex-col items-center">
             <Avatar
               img={(props) => (
                 <Image
                   alt=""
                   //   height="100"
                   referrerPolicy="no-referrer"
-                  src={Profile}
+                  src={testinomial.img}
                   //   width="100"
                   {...props}
                 />
@@ -79,14 +115,9 @@ const Testinomials = () => {
               className="mb-2"
             />
             <p className="testinomial mb-2 font-bold">
-              David is a well-established psychologist and delivers a very
-              professional service. As a skilled therapist David brings not only
-              depth, warmth and wisdom to his practice, he also has a sense of
-              humour and charm, that invites trust and ease to his clients. I
-              highly recommend David to any individual or organization in need
-              of quality service.
+              {testinomial.description}
             </p>
-            <h4 className="mb-1">Ashwin Kuzikattu</h4>
+            <h4 className="mb-1">{testinomial.name}</h4>
             <div className="flex">
               <i className="fa fa-star" />
               <i className="fa fa-star" />
@@ -95,74 +126,9 @@ const Testinomials = () => {
               <i className="fa fa-star" />
             </div>
           </div>
-          <div className="flex justify-center flex-col items-center">
-            <Avatar
-              img={(props) => (
-                <Image
-                  alt=""
-                  //   height="100"
-                  referrerPolicy="no-referrer"
-                  src={Profile}
-                  //   width="100"
-                  {...props}
-                />
-              )}
-              rounded
-              size="lg"
-              color="light"
-              className="mb-2"
-            />
-            <p className="testinomial mb-2 font-bold">
-              David is a well-established psychologist and delivers a very
-              professional service. As a skilled therapist David brings not only
-              depth, warmth and wisdom to his practice, he also has a sense of
-              humour and charm, that invites trust and ease to his clients. I
-              highly recommend David to any individual or organization in need
-              of quality service.
-            </p>
-            <h4 className="mb-1">Hitesh Pal</h4>
-            <div className="flex">
-              <i className="fa fa-star" />
-              <i className="fa fa-star" />
-              <i className="fa fa-star" />
-              <i className="fa fa-star" />
-              <i className="fa fa-star" />
-            </div>
-          </div>
-          <div className="flex justify-center flex-col items-center">
-            <Avatar
-              img={(props) => (
-                <Image
-                  alt=""
-                  //   height="100"
-                  referrerPolicy="no-referrer"
-                  src={Profile}
-                  //   width="100"
-                  {...props}
-                />
-              )}
-              rounded
-              size="lg"
-              color="light"
-              className="mb-2"
-            />
-            <p className="testinomial mb-2 font-bold">
-              David is a well-established psychologist and delivers a very
-              professional service. As a skilled therapist David brings not only
-              depth, warmth and wisdom to his practice, he also has a sense of
-              humour and charm, that invites trust and ease to his clients. I
-              highly recommend David to any individual or organization in need
-              of quality service.
-            </p>
-            <h4 className="mb-1">Ayush Yadav</h4>
-            <div className="flex">
-              <i className="fa fa-star" />
-              <i className="fa fa-star" />
-              <i className="fa fa-star" />
-              <i className="fa fa-star" />
-              <i className="fa fa-star" />
-            </div>
-          </div>
+              </>
+            })
+          }
         </Carousel>
       </div>
     </div>
