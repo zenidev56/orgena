@@ -15,7 +15,7 @@ const Founder = () => {
 
           <div className="container flex flex-col justify-center w-full px-6 py-1 mx-auto lg:absolute lg:inset-x-0">
             <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
-              What our <span className="text-blue-500">Founder's</span> <br />
+              What our <span className="text-blue-500">Founder&apos;s</span> <br />
               saying
             </h1>
 

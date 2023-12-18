@@ -55,7 +55,7 @@ const WhyChooseUs = () => {
       <h1 className="choose-primary">Why Choose US</h1>
       <p className="choose-description">
         Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever
         since the 1500s
       </p>
       <div className="choose-card-container">
