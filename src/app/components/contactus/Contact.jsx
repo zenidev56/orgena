@@ -1,8 +1,10 @@
+"use client"
 import "./contact.css";
 
 import React, { useState } from "react";
 
 import { Resend } from "resend";
+
 
 const Contact = () => {
   const [contactForm, setContactForm] = useState({
