@@ -1,6 +1,12 @@
 {
-    "build": {
-      "npm": "--force --legacy-peer-deps"
+  "builds": [{ "src": "package.json", "use": "@vercel/node" }],
+  "functions": {
+    "myFunction": {
+      "runtime": "vercel-node@3.4",
+      "memory": 512,
+      "npm": {
+        "flags": "--force --legacy-peer-deps"
+      }
     }
   }
-  
+}
