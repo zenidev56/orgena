@@ -1,5 +1,0 @@
-{
-  "scripts": {
-    "build": "npm install --force --legacy-peer-deps && next build"
-  }
-}
