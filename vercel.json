@@ -1,0 +1,6 @@
+{
+    "build": {
+      "npm": "--force --legacy-peer-deps"
+    }
+  }
+  
