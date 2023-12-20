@@ -24,6 +24,8 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log({loading});
+    
     setLoading(false);
   }, []);
 
