@@ -66,7 +66,7 @@ const Faq = () => {
           {faqInfo.map((faq, index) => {
             return (
               <>
-                <div className="py-5">
+                <div className="py-5" key={index}>
                   <details className="group">
                     <summary className="flex justify-between items-center font-medium cursor-pointer list-none">
                       <span> {faq.question}</span>

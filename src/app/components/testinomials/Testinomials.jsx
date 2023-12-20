@@ -97,7 +97,7 @@ const Testinomials = () => {
           {
             testinomials.map((testinomial,index) => {
               return <>
-                   <div className="flex justify-center flex-col items-center">
+                   <div className="flex justify-center flex-col items-center" key={index}>
             <Avatar
               img={(props) => (
                 <Image

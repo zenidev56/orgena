@@ -2,11 +2,11 @@
 
 import "./card.css";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 import { Card } from "flowbite-react";
 import Image from "next/image";
-import Flippy, { BackSide, FrontSide } from "react-flippy";
+import ReactCardFlip from "react-card-flip";
 
 const CardComponent = ({ title, description, image, symptons, condition }) => {
   const ref = useRef();
@@ -80,9 +80,91 @@ const CardComponent = ({ title, description, image, symptons, condition }) => {
       symptons: ["", "", "", ""],
     },
   ];
+  const [isFlipped, setIsFlipped] = useState(false);
+  const handleClick = (e) => {
+    e.preventDefault();
+    setIsFlipped(prevState => ({ isFlipped: !prevState.isFlipped }));
+  }
+
   return (
     <>
-      <Flippy
+    <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+        <div onClick={handleClick}>
+        <Card
+            className="max-w-sm"
+            renderImage={() => (
+              <Image width={500} height={500} src={image} alt="image 1" />
+            )}
+          >
+            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              {title}
+            </h5>
+            <p className="font-normal text-gray-700 dark:text-gray-400">
+              <span className="text-l font-bold tracking-tight text-gray-900 dark:text-white">
+                Why it hurts:
+              </span>{" "}
+              {description}
+            </p>
+          </Card>
+        </div>
+
+        <div onClick={handleClick}>
+        <Card className="max-w-sm gap-0">
+            <p className="font-normal text-gray-700 dark:text-gray-400">
+              <span className="text-l font-bold tracking-tight text-gray-900 dark:text-white">
+                Conditions:
+              </span>{" "}
+              {condition}
+            </p>
+            <span className="text-l font-bold tracking-tight text-gray-900 dark:text-white">
+              Symptoms:
+            </span>{" "}
+            <ul className="my-1 space-y-5">
+              {symptons.map((sympton, index) => {
+                return (
+                  <li className="flex space-x-3" key={index}>
+                      <svg
+                        className="w-8 h-8 text-gray-800 dark:text-white"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="black"
+                        viewBox="0 0 10 16"
+                      >
+                        <path
+                          stroke="currentColor"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="m2.707 14.293 5.586-5.586a1 1 0 0 0 0-1.414L2.707 1.707A1 1 0 0 0 1 2.414v11.172a1 1 0 0 0 1.707.707Z"
+                        />
+                      </svg>
+                      <span className="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">
+                        {sympton}
+                      </span>
+                    </li>
+                );
+              })}
+            </ul>
+          </Card>
+        </div>
+      </ReactCardFlip>
+      {/* <Card
+            className="max-w-sm"
+            renderImage={() => (
+              <Image width={500} height={500} src={image} alt="image 1" />
+            )}
+          >
+            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              {title}
+            </h5>
+            <p className="font-normal text-gray-700 dark:text-gray-400">
+              <span className="text-l font-bold tracking-tight text-gray-900 dark:text-white">
+                Why it hurts:
+              </span>{" "}
+              {description}
+            </p>
+          </Card> */}
+      {/* <Flippy
         flipOnHover={true} // default false
         flipOnClick={true} // default false
         flipDirection="horizontal" // horizontal or vertical
@@ -149,7 +231,7 @@ const CardComponent = ({ title, description, image, symptons, condition }) => {
             </ul>
           </Card>
         </BackSide>
-      </Flippy>
+      </Flippy> */}
     </>
   );
 };
