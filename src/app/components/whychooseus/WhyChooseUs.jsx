@@ -28,35 +28,33 @@ const WhyChooseUs = () => {
     {
       title: "With a Touch of Kindness",
       description:
-        "Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Sed fringilla mauris sit amet nibh.",
+        "Experience compassionate care on your healing journey. Our skilled team provides personalized physiotherapy, prioritizing your well-being.",
       url: FeatureImg3,
     },
     {
       title: "Friendly Atmosphere",
       description:
-        "Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Sed fringilla mauris sit amet nibh.",
+        "Our Physiotherapy Clinic Offers a Welcoming Environment, Skilled Therapists, and Personalized Care for Your Optimal Well-being",
       url: FeatureImg4,
     },
     {
       title: "Certified Therapist",
       description:
-        "Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Sed fringilla mauris sit amet nibh.",
+        " Experience Optimal Healing with Our Accredited Physiotherapists. Trust in Expertise, Personalized Care, and a Commitment to Your Well-being.",
       url: FeatureImg5,
     },
     {
       title: "Individual Approach",
       description:
-        "Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Sed fringilla mauris sit amet nibh.",
+        "Our Physiotherapy Services Tailor Solutions to Your Unique Needs. Personalized Care for Your Optimal Well-being and Recovery.",
       url: FeatureImg6,
     },
   ];
   return (
     <div className="choose-container">
       <h1 className="choose-primary">Why Choose US</h1>
-      <p className="choose-description">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever
-        since the 1500s
+      <p className="choose-description mb-5">
+      Choose us for top-notch physiotherapy. Our skilled team delivers personalized care with modern techniques, prioritizing your well-being. Regain mobility and alleviate pain with our dedicated approach to your health and recovery.
       </p>
       <div className="choose-card-container">
         {FeaturesData.map((feature, index) => {

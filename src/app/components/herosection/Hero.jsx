@@ -26,8 +26,8 @@ const Hero = () => {
               Providing Exceptional Physiotherapy and Care for All
             </h1>
             <p className="hero-description">
-              At our clinic, we offer personalized and effective physiotherapy
-              and chiropractic services to help you achieve optimal health and
+              At our clinic, we offer personalized and effective Physiotherapy
+              and Physical services to help you achieve optimal health and
               wellness.
             </p>
             <div className="hero-action-btn">

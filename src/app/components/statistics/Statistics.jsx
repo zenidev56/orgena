@@ -5,10 +5,9 @@ const Statistics = () => {
     <div>
       <div className="flex items-center justify-center flex-col statistics-container">
         <div className="text-center mb-5">
-          <h2 className="text-4xl	font-bold">Over 10000+ Working Experience</h2>
-          <p className="text-base font-medium">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <h2 className="text-4xl	font-bold">Over 1000+ Working Experience</h2>
+          <p className="text-base font-medium mt-2 mb-2">
+          Elevate Your Healing Experience: Expertise, Modern Techniques, and Personalized Care. Prioritizing Your Well-being for Effective Recovery.
           </p>
         </div>
         <div className="stats-exp-container text-center">

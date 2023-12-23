@@ -21,38 +21,34 @@ const Contact = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    const { name, email, condition, treatment, message } = contactForm;
-    console.log({ name, email, condition, treatment, message });
-    const resend = new Resend("re_RvfUMsUn_DiawgkpZ4wN4dUWynG8suJxu");
-
-    const response = await resend.emails.send({
-      from: "onboarding@resend.dev",
-      to: "hiteshpal.8097@gmail.com",
-      subject: "Hello World",
-      html: `
-      <h3>Hello Augustine</h3>
-      <li> Name: ${name}</li>
-      <li> This is my email: ${email}</li> 
-      <li> I have this condition: ${condition}</li> 
-      <li> I want this treatment: ${treatment}</li> 
-      <li> message: ${message}</li> 
-      `,
+    const {
+      name,
+      email,
+      condition,
+      treatment,
+      message,
+    } = contactForm
+    console.log({
+      name,
+      email,
+      condition,
+      treatment,
+      message,
+    })
+    const response = await fetch("/api/sendmail", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        condition,
+        treatment,
+        message,
+      }),
     });
-    console.log({ response });
-    // const response = await fetch("/api/sendEmail", {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     name,
-    //     email,
-    //     condition,
-    //     treatment,
-    //     message,
-    //   }),
-    // });
-    // console.log(await response.json());
+    console.log(await response.json());
   };
   const conditions = [
     "Neck Pain",
@@ -390,8 +386,8 @@ const Contact = () => {
                 Our friendly team is here to help.
               </p>
               <p className="mt-2 text-blue-500 dark:text-blue-400">
-                hello@merakiui.com
-              </p>
+                drjuliepawar@gmail.com
+              </p>  
             </div>
 
             <div>
@@ -424,7 +420,7 @@ const Contact = () => {
                 Come say hello at our office HQ.
               </p>
               <p className="mt-2 text-blue-500 dark:text-blue-400">
-                100 Smith Street Collingwood VIC 3066 AU
+              Bldg no 2, Ideal Enclave, Shop no 9, Ramdev Park Rd, Beverly Park, Mira Road East,
               </p>
             </div>
 
@@ -450,10 +446,10 @@ const Contact = () => {
                 Phone
               </h2>
               <p className="mt-2 text-gray-500 dark:text-gray-400">
-                Mon-Fri from 8am to 5pm.
+                Mon-Fri from 9am to 9pm.
               </p>
               <p className="mt-2 text-blue-500 dark:text-blue-400">
-                +1 (555) 000-0000
+                +91 9920877138
               </p>
             </div>
           </div>
