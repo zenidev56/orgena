@@ -1,75 +1,108 @@
-import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { NextResponse } from 'next/server';
 
-export async function POST(request: { json: () => PromiseLike<{ name: any; email: any; condition: any; treatment: any; message: any; }> | { name: any; email: any; condition: any; treatment: any; message: any; }; }) {
-  // try {
-  //   const { name, email, condition, treatment, message } = await request.json();
-  //   require('dotenv').config()
-  
-  // let nodemailer = require('nodemailer')
-  // const transporter = nodemailer.createTransport({
-  //   port: 465,
-  //   host: "smtp.gmail.com",
-  //   auth: {
-  //     user: '',
-  //     pass: process.env.password,
-  //   },
-  //   secure: true,
-  // })
-  // const mailData = {
-  //   from: 'demo email',
-  //   to: 'your email',
-  //   subject: `Message From ${name}`,
-  //   text: message + " | Sent from: " + email,
-  //        html: `
-  //       <li> Hello: ${name}</li>
-  //       <li> This is my email: ${email}</li> 
-  //       <li> I have this condition: ${condition}</li> 
-  //       <li> I want this treatment: ${treatment}</li> 
-  //       <li> message: ${message}</li> 
-  //       `,
-  // }
-  // transporter.sendMail(mailData, function (err, info) {
-  //   if(err)
-  //     console.log(err)
-  //   else
-  //     console.log(info)
-  // })
-    // console.log({ name, email, condition, treatment, message })
-    // const transporter = nodemailer.createTransport({
-    //   host: "live.smtp.mailtrap.io",
-    //   port: 587,
-    //   secure: true,
-    //   auth: {
-    //     user: "api",
-    //     pass: "4763a5c3ae4f6ddb70f7ec5918e3a520",
-    //   },
-    // });
+const AWS = require("aws-sdk");
 
-    // const mailOption = {
-    //   from: "careeros@tryporpra.com",
-    //   to: "augustinerepos@gmail.com",
-    //   subject: "Send Email Tutorial",
-    //   html: `
-    //     <li> Hello: ${name}</li>
-    //     <li> This is my email: ${email}</li> 
-    //     <li> I have this condition: ${condition}</li> 
-    //     <li> I want this treatment: ${treatment}</li> 
-    //     <li> message: ${message}</li> 
-    //     `,
-    // };
+var nodemailer = require("nodemailer");
 
-    // const response = await transporter.sendMail(mailOption);
+export async function POST(request: { json: () => PromiseLike<{ name: any; email: any; condition: any; treatment: any; message: any; }> | { name: any; email: any; condition: any; treatment: any; message: any; phone: any; }; }) {
+  try {
+    const { name, email, condition, treatment, message, phone } = await request.json();
+  require('dotenv').config()
+  var params = {
+    Destination: { /* required */
+      CcAddresses: [
+        'pawarjulie2@gmail.com',
+        /* more items */
+      ],
+      ToAddresses: [
+        'pawarjulie2@gmail.com',
+        /* more items */
+      ]
+    },
+    Message: { /* required */
+      Body: { /* required */
+        Html: {
+         Charset: "UTF-8",
+         Data: `
+         <html lang="en">
+         <head>
+           <meta charset="UTF-8" />
+           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+           <title>You got a New Patient's Request</title>
+           <style>
+             /* Add your custom CSS styles here */
+             body {
+                 font-family: Arial, sans-serif;
+                 background-color: #f4f4f4;
+                 margin: 0;
+                 padding: 0;
+             }
+             .container {
+                 max-width: 600px;
+                 margin: 0 auto;
+                 padding: 20px;
+                 background-color: #ffffff;
+             }
+             h1 {
+                 color: #333;
+             }
+             p {
+                 color: #666;
+             }
+           </style>
+         </head>
+         <body>
+           <div class="container">
+             <h1>Hi Dr Julie Pawar</h1>
+             <p>
+               My name is ${name} and I have this condition ${condition}. I am
+               looking for this treatment ${treatment}
+             </p>
+       
+             <br />
+             <br />
+             <h3>${name} Personal Message</h3>
+             <p>${message}</p>
+       
+             <h4>${name} Contact info</h4>
+             <p> ${phone} </p>
+             <p> ${email} </p>
+             
+       
+             <p>Best Regards,<br />Care Physiotherapy</p>
+           </div>
+         </body>
+       </html>
+         `
+        },
+        Text: {
+         Charset: "UTF-8",
+         Data: "Hi Hitesh here"
+        }
+       },
+       Subject: {
+        Charset: 'UTF-8',
+        Data: "You got a New Patient's Contact request"
+       }
+      },
+    Source: 'pawarjulie2@gmail.com', /* required */
+    ReplyToAddresses: [
+       'pawarjulie2@gmail.com',
+      /* more items */
+    ],
+  };
+  AWS.config.update({region: 'ap-south-1'});
 
+  var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
+  return NextResponse.json(
+    { message: "Email Sent Successfully", data: sendPromise },
+    { status: 200 },
+  );
+
+  } catch (error) {
     return NextResponse.json(
-      { message: "Email Sent Successfully" },
-      { status: 200 }
-    );
-  } catch (error:any) {
-    console.log({error: error.message})
-    return NextResponse.json(
-      // { message: "Failed to Send Email" },
-      { status: 500 }
+      { message: error },
+      { status: 500 },
     );
   }
 }

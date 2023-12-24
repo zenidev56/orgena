@@ -1,6 +1,7 @@
 .testinomial-container {
   padding: 3.4rem 5.6rem;
-  height: 35rem;
+  height: 37rem;
+  margin-top: 4rem;
 }
 .fa-star {
   color: var(--secondary-color);
@@ -24,15 +25,19 @@
   font-size: 1rem;
   margin-bottom: 1rem;
 }
+.carosel-container {
+  padding: 0rem 2rem;
+  text-align: left;
+}
 .carosel-container > div:nth-child(2),
 .carosel-container > div:last-child {
   padding: 0px;
 }
 .carosel-container > div:nth-child(2) {
-  left: -1.5rem;
+  left: -0.5rem;
 }
 .carosel-container > div:last-child {
-  right: -1.5rem;
+  right: 0.5rem;
 }
 @media (max-width: 500px) {
   .testinomial-container {
@@ -45,6 +50,6 @@
   }
   .testinomial {
     font-size: 14px;
-    text-align: center;
+    text-align: justify;
   }
 }

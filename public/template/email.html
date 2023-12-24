@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You got a New Patient's Request</title>
+    <style>
+      /* Add your custom CSS styles here */
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          margin: 0;
+          padding: 0;
+      }
+      .container {
+          max-width: 600px;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #ffffff;
+      }
+      h1 {
+          color: #333;
+      }
+      p {
+          color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hi Dr Julie Pawar</h1>
+      <p>
+        My name is {{name}} and I have this condition {{condition_name}}. I am
+        looking for this treatment {{treatment_name}}
+      </p>
+
+      <br />
+      <br />
+      <h3>{{name}} Personal Message</h3>
+      <p>{{message}}</p>
+
+      <h4>My Contact info</h4>
+      {{phone}} {{email}}
+
+      <p>Best Regards,<br />Care Physiotherapy</p>
+    </div>
+  </body>
+</html>

@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aws": "^0.0.3-2",
+    "aws-sdk": "^2.1525.0",
+    "dotenv": "^16.3.1",
     "flowbite": "^2.2.0",
     "flowbite-react": "^0.7.0",
     "framer-motion": "^10.16.12",
@@ -18,6 +21,7 @@
     "react-card-flip": "^1.2.2",
     "react-dom": "^18",
     "react-scroll-parallax": "^3.4.5",
+    "react-transition-group": "^4.4.5",
     "styled-components": "^6.1.1"
   },
   "devDependencies": {

@@ -1,10 +1,7 @@
-"use client"
+"use client";
 import "./contact.css";
 
 import React, { useState } from "react";
-
-import { Resend } from "resend";
-
 
 const Contact = () => {
   const [contactForm, setContactForm] = useState({
@@ -20,35 +17,26 @@ const Contact = () => {
   };
 
   const onSubmit = async (e) => {
-    e.preventDefault();
-    const {
-      name,
-      email,
-      condition,
-      treatment,
-      message,
-    } = contactForm
-    console.log({
-      name,
-      email,
-      condition,
-      treatment,
-      message,
-    })
-    const response = await fetch("/api/sendmail", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        condition,
-        treatment,
-        message,
-      }),
-    });
-    console.log(await response.json());
+    try {
+      e.preventDefault();
+      const { name, email, condition, treatment, message, phone } = contactForm;
+      await fetch("/api/sendmail", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          condition,
+          treatment,
+          message,
+          phone,
+        }),
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
   const conditions = [
     "Neck Pain",
@@ -252,6 +240,21 @@ const Contact = () => {
                     className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                 </div>
+                <div className="mt-4">
+                  <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
+                    Phone Number
+                  </label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="phone"
+                    value={contactForm.phone}
+                    onChange={handleChange}
+                    placeholder="91+ 000000 0000"
+                    pattern="[1-9]{1}[0-9]{9}"
+                    className="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                  />
+                </div>
                 <div className="mt-4 max-w-md ">
                   <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
                     What&apos;s your Condition
@@ -345,7 +348,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      <section className="bg-white dark:bg-gray-900 relative" >
+      <section className="bg-white dark:bg-gray-900 relative">
         <div className="container px-6 py-12 mx-auto">
           <div>
             {/* <p className="font-medium text-blue-500 dark:text-blue-400">
@@ -387,7 +390,7 @@ const Contact = () => {
               </p>
               <p className="mt-2 text-blue-500 dark:text-blue-400">
                 drjuliepawar@gmail.com
-              </p>  
+              </p>
             </div>
 
             <div>
@@ -420,7 +423,8 @@ const Contact = () => {
                 Come say hello at our office HQ.
               </p>
               <p className="mt-2 text-blue-500 dark:text-blue-400">
-              Bldg no 2, Ideal Enclave, Shop no 9, Ramdev Park Rd, Beverly Park, Mira Road East,
+                Bldg no 2, Ideal Enclave, Shop no 9, Ramdev Park Rd, Beverly
+                Park, Mira Road East,
               </p>
             </div>
 
