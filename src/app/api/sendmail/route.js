@@ -1,34 +1,12 @@
-import { NextApiResponse } from 'next';
-import { NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
 
 const AWS = require("aws-sdk");
-type ResponseData = {
-  message: string
-}
-async function handler(request: {
-  json: () =>
-    | PromiseLike<{
-        name: any;
-        email: any;
-        condition: any;
-        treatment: any;
-        message: any;
-        phone: any;
-      }>
-    | {
-        name: any;
-        email: any;
-        condition: any;
-        treatment: any;
-        message: any;
-        phone: any;
-      };
-},
-response: NextApiResponse<ResponseData>) {
+
+async function handler(request, response) {
   try {
     const { name, email, condition, treatment, message, phone } =
       await request.json();
-      console.log({ name, email, condition, treatment, message, phone })
+    console.log({ name, email, condition, treatment, message, phone });
     require("dotenv").config();
     var params = {
       Destination: {
