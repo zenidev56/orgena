@@ -5,7 +5,7 @@ const AWS = require("aws-sdk");
 type ResponseData = {
   message: string
 }
-export default async function handler(request: {
+async function handler(request: {
   json: () =>
     | PromiseLike<{
         name: any;
@@ -28,6 +28,7 @@ response: NextApiResponse<ResponseData>) {
   try {
     const { name, email, condition, treatment, message, phone } =
       await request.json();
+      console.log({ name, email, condition, treatment, message, phone })
     require("dotenv").config();
     var params = {
       Destination: {
@@ -128,3 +129,5 @@ response: NextApiResponse<ResponseData>) {
     return NextResponse.json({ message: error }, { status: 500 });
   }
 }
+
+export { handler as POST };
