@@ -2,26 +2,48 @@ import { NextResponse } from 'next/server';
 
 const AWS = require("aws-sdk");
 
-export default async function POST(request: { json: () => PromiseLike<{ name: any; email: any; condition: any; treatment: any; message: any; }> | { name: any; email: any; condition: any; treatment: any; message: any; phone: any; }; }) {
+export default async function POST(request: {
+  json: () =>
+    | PromiseLike<{
+        name: any;
+        email: any;
+        condition: any;
+        treatment: any;
+        message: any;
+        phone: any;
+      }>
+    | {
+        name: any;
+        email: any;
+        condition: any;
+        treatment: any;
+        message: any;
+        phone: any;
+      };
+}) {
   try {
-    const { name, email, condition, treatment, message, phone } = await request.json();
-  require('dotenv').config()
-  var params = {
-    Destination: { /* required */
-      CcAddresses: [
-        'pawarjulie2@gmail.com',
-        /* more items */
-      ],
-      ToAddresses: [
-        'pawarjulie2@gmail.com',
-        /* more items */
-      ]
-    },
-    Message: { /* required */
-      Body: { /* required */
-        Html: {
-         Charset: "UTF-8",
-         Data: `
+    const { name, email, condition, treatment, message, phone } =
+      await request.json();
+    require("dotenv").config();
+    var params = {
+      Destination: {
+        /* required */
+        CcAddresses: [
+          "pawarjulie2@gmail.com",
+          /* more items */
+        ],
+        ToAddresses: [
+          "pawarjulie2@gmail.com",
+          /* more items */
+        ],
+      },
+      Message: {
+        /* required */
+        Body: {
+          /* required */
+          Html: {
+            Charset: "UTF-8",
+            Data: `
          <html lang="en">
          <head>
            <meta charset="UTF-8" />
@@ -71,36 +93,34 @@ export default async function POST(request: { json: () => PromiseLike<{ name: an
            </div>
          </body>
        </html>
-         `
+         `,
+          },
+          Text: {
+            Charset: "UTF-8",
+            Data: "Hi Hitesh here",
+          },
         },
-        Text: {
-         Charset: "UTF-8",
-         Data: "Hi Hitesh here"
-        }
-       },
-       Subject: {
-        Charset: 'UTF-8',
-        Data: "You got a New Patient's Contact request"
-       }
+        Subject: {
+          Charset: "UTF-8",
+          Data: "You got a New Patient's Contact request",
+        },
       },
-    Source: 'pawarjulie2@gmail.com', /* required */
-    ReplyToAddresses: [
-       'pawarjulie2@gmail.com',
-      /* more items */
-    ],
-  };
-  AWS.config.update({region: 'ap-south-1'});
+      Source: "pawarjulie2@gmail.com" /* required */,
+      ReplyToAddresses: [
+        "pawarjulie2@gmail.com",
+        /* more items */
+      ],
+    };
+    AWS.config.update({ region: "ap-south-1" });
 
-  var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
-  return NextResponse.json(
-    { message: "Email Sent Successfully", data: sendPromise },
-    { status: 200 },
-  );
-
-  } catch (error) {
+    var sendPromise = new AWS.SES({ apiVersion: "2010-12-01" })
+      .sendEmail(params)
+      .promise();
     return NextResponse.json(
-      { message: error },
-      { status: 500 },
+      { message: "Email Sent Successfully", data: sendPromise },
+      { status: 200 }
     );
+  } catch (error) {
+    return NextResponse.json({ message: error }, { status: 500 });
   }
 }
