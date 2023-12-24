@@ -2,9 +2,7 @@ import { NextResponse } from 'next/server';
 
 const AWS = require("aws-sdk");
 
-var nodemailer = require("nodemailer");
-
-export async function POST(request: { json: () => PromiseLike<{ name: any; email: any; condition: any; treatment: any; message: any; }> | { name: any; email: any; condition: any; treatment: any; message: any; phone: any; }; }) {
+export default async function POST(request: { json: () => PromiseLike<{ name: any; email: any; condition: any; treatment: any; message: any; }> | { name: any; email: any; condition: any; treatment: any; message: any; phone: any; }; }) {
   try {
     const { name, email, condition, treatment, message, phone } = await request.json();
   require('dotenv').config()
