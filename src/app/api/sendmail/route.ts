@@ -1,8 +1,11 @@
+import { NextApiResponse } from 'next';
 import { NextResponse } from 'next/server';
 
 const AWS = require("aws-sdk");
-
-export default async function POST(request: {
+type ResponseData = {
+  message: string
+}
+export default async function handler(request: {
   json: () =>
     | PromiseLike<{
         name: any;
@@ -20,7 +23,8 @@ export default async function POST(request: {
         message: any;
         phone: any;
       };
-}) {
+},
+response: NextApiResponse<ResponseData>) {
   try {
     const { name, email, condition, treatment, message, phone } =
       await request.json();
@@ -117,7 +121,7 @@ export default async function POST(request: {
       .sendEmail(params)
       .promise();
     return NextResponse.json(
-      { message: "Email Sent Successfully", data: sendPromise },
+      { message: "Email Sent Successfully" },
       { status: 200 }
     );
   } catch (error) {
