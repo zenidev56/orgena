@@ -1,8 +1,9 @@
 import React from "react";
 
-import ContactHero from "../components/contactHero/ContactHero";
+import Cta from "../components/cta/Cta";
 import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/Navbar";
+import Statistics from "../components/statistics/Statistics";
 
 const Founder = () => {
   return (
@@ -15,7 +16,8 @@ const Founder = () => {
 
           <div className="container flex flex-col justify-center w-full px-6 py-1 mx-auto lg:absolute lg:inset-x-0">
             <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
-              What our <span className="text-blue-500">Founder&apos;s</span> <br />
+              What our <span className="text-blue-500">Founder&apos;s</span>{" "}
+              <br />
               saying
             </h1>
 
@@ -35,7 +37,7 @@ const Founder = () => {
                 </p>
 
                 <h3 className="mt-6 text-lg font-medium text-blue-500">
-                  Julie Pawar
+                  DR Julie Pawar
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
                   Physiotherapists
@@ -44,6 +46,7 @@ const Founder = () => {
             </div>
           </div>
         </div>
+        <Statistics />
         <div className="container px-6 py-1 mx-auto">
           <h1 className="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white">
             Contact Info
@@ -143,7 +146,8 @@ const Founder = () => {
           </div>
         </div>
       </section>
-      <ContactHero />
+      <Cta />
+      {/* <ContactHero /> */}
       <Footer />
     </div>
   );

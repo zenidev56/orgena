@@ -32,13 +32,13 @@ const Hero = () => {
             </p>
             <div className="hero-action-btn">
               <Link href="#contact" className="btn btn--fill margin-right-btn">
-                Get Help
+                Contact Us
               </Link>
               <Link
                 href="/founder"
                 className="btn btn--outline margin-right-btn"
               >
-                Learn more &darr;
+                Our Founder &darr;
               </Link>
             </div>
           </div>

@@ -24,6 +24,11 @@
   align-items: center;
   gap: 1rem;
 }
+.service-extra {
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: justify;
+}
 @media (max-width: 1038px) {
   .services-container {
     padding: 0rem 1rem;
