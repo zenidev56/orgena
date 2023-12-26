@@ -1,5 +1,5 @@
 .contact-primary {
-  font-size: 5.2rem;
+  font-size: var(--web-heading-font-size);
   color: var(--primary-text-color);
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -14,7 +14,7 @@
 }
 .contact-description {
   color: var(--secondary-text-color);
-  font-size: 1rem;
+  font-size: var(--web-description-font-size);
   margin-bottom: 1rem;
 }
 
@@ -25,7 +25,10 @@
     margin-bottom: 2.5rem;
   }
   .contact-primary {
-    font-size: 3rem;
+    font-size: var(--mobile-heading-font-size);
+  }
+  .contact-description {
+    font-size: var(--mobile-description-font-size);
   }
   .contact {
     font-size: 14px;

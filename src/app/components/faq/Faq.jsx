@@ -53,7 +53,7 @@ const Faq = () => {
     },
   ];
   return (
-    <div className="faq-container">
+    <div id="faq" className="faq-container">
       <div className="max-w-screen-xl mx-auto px-5 bg-white min-h-sceen">
         <div className="flex flex-col">
           <p className="faq-secondary">FAQ</p>
@@ -86,7 +86,7 @@ const Faq = () => {
                         </svg>
                       </span>
                     </summary>
-                    <p className="text-neutral-600 mt-3 group-open:animate-fadeIn">
+                    <p className="text-neutral-600 mt-3 group-open:animate-fadeIn text-justify">
                       {faq.answer}
                     </p>
                   </details>

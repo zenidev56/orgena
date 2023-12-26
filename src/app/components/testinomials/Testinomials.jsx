@@ -45,7 +45,7 @@ const Testinomials = () => {
     },
   ];
   return (
-    <div>
+    <div id="testimonials">
       <div className="sm:h-64 xl:h-80 2xl:h-96 flex justify-center flex-col items-left testinomial-container	">
         <h4 className="testinomial-secondary">WHAT HAPPY CLIENTS SAY</h4>
         <h2 className="testinomial-primary"> Testinomials</h2>

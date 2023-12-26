@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="about-container">
+    <div className="about-container" id="about">
       <div className="about-img">
         <Image src={AboutImg} alt="About img" />
       </div>

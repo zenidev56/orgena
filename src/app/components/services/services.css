@@ -5,7 +5,7 @@
   text-align: left;
 }
 .service-primary {
-  font-size: 5.2rem;
+  font-size: var(--web-heading-font-size);
   color: var(--primary-text-color);
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -13,7 +13,7 @@
   margin-bottom: 1rem;
 }
 .service-description {
-  font-size: 2rem;
+  font-size: var(--web-description-font-size);
   line-height: 1.5;
   margin-bottom: 1rem;
 }
@@ -28,17 +28,13 @@
   font-weight: bold;
   color: var(--primary-color);
   text-align: justify;
+  font-size: var(--mobile-description-font-size);
+  margin-bottom: 1rem;
 }
 @media (max-width: 1038px) {
   .services-container {
     padding: 0rem 1rem;
     margin-bottom: 3.4rem;
-  }
-  .service-primary {
-    font-size: 4rem;
-  }
-  .service-description {
-    font-size: 1.5rem;
   }
   .services-cards {
     flex-direction: column;
@@ -48,13 +44,13 @@
 @media (max-width: 500px) {
   .services-container {
     padding: 0rem 1rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 5.5rem;
   }
   .service-primary {
-    font-size: 3rem;
+    font-size: var(--mobile-heading-font-size);
   }
   .service-description {
-    font-size: 1rem;
+    font-size: var(--mobile-description-font-size);
   }
   .services-cards {
     gap: 2rem;

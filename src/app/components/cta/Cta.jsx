@@ -19,10 +19,10 @@ const Cta = () => {
         }}
       >
         <div className="container flex flex-col flex-wrap content-center justify-center p-7 py-20 mx-auto md:p-15">
-          <h1 className="text-5xl antialiased font-semibold text-white text-center mb-8 dark:text-gray-100">
+          <h1 className=" text-2xl md:text-5xl antialiased font-semibold text-white text-center mb-8 dark:text-gray-100 text-sm-xl">
             Ready to take charge of your well-being?
           </h1>
-          <p className="pt-2 pb-8 text-lg antialiased text-center text-slate-300 dark:text-gray-100">
+          <p className="pt-2 pb-8 text-base md:text-lg antialiased text-center text-slate-300 dark:text-gray-100">
             Lets kickstart your personalized journey to recovery. Book your
             appointment today and embrace a healthier, more active lifestyle.
             Your body will thank you!

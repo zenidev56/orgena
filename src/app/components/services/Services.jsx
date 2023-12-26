@@ -69,7 +69,7 @@ const Services = () => {
     },
   ];
   return (
-    <div className="services-container">
+    <div id="services" className="services-container">
       <div className="services-heading">
         <h1 className="service-primary">Conditions we treat</h1>
         <p className="service-description">

@@ -2,7 +2,7 @@
   padding: 0 3.2rem;
 }
 .choose-primary {
-  font-size: 5.2rem;
+  font-size: var(--web-heading-font-size);
   color: var(--primary-text-color);
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -10,7 +10,7 @@
   margin-bottom: 1rem;
 }
 .choose-description {
-  font-size: 2rem;
+  font-size: var(--web-description-font-size);
 }
 .choose-card-container {
   display: flex;
@@ -22,10 +22,10 @@
 
 @media (max-width: 500px) {
   .choose-primary {
-    font-size: 3rem;
+    font-size: var(--mobile-heading-font-size);
   }
   .choose-description {
-    font-size: 1rem;
+    font-size: var(--mobile-description-font-size);
   }
   .choose-container {
     padding: 0 1rem;

@@ -4,6 +4,7 @@ import React from "react";
 
 import Logo from "/public/logo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
       <footer className="px-4 divide-y dark:bg-gray-800 dark:text-gray-100">
         <div className="container flex flex-col justify-between pb-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
           <div className="lg:w-1/3">
-            <a
+            <Link
               rel="noopener noreferrer"
               href="#"
               className="flex justify-center items-center space-x-3 lg:justify-start"
@@ -21,34 +22,34 @@ const Footer = () => {
                   <Image src={Logo} alt="Logo" />
                 </div>
               </div>
-              <span className="self-center text-2xl font-semibold">
+              <span className="footer-logo self-center text-2xl font-semibold">
                 Care Physiotherapy
               </span>
-            </a>
+            </Link>
           </div>
           <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
             <div className="space-y-3">
               <h3 className="tracki uppercase dark:text-gray-50">Product</h3>
               <ul className="space-y-1">
                 <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Features
-                  </a>
+                  <Link rel="noopener noreferrer" href="#about">
+                    About Us
+                  </Link>
                 </li>
                 <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Integrations
-                  </a>
+                  <Link rel="noopener noreferrer" href="#choose-us">
+                    Key Benefits
+                  </Link>
                 </li>
                 <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Pricing
-                  </a>
+                  <Link rel="noopener noreferrer" href="#services">
+                    Conditions we Treat
+                  </Link>
                 </li>
                 <li>
-                  <a rel="noopener noreferrer" href="#">
+                  <Link rel="noopener noreferrer" href="#faq">
                     FAQ
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -56,34 +57,24 @@ const Footer = () => {
               <h3 className="tracki uppercase dark:text-gray-50">Company</h3>
               <ul className="space-y-1">
                 <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Privacy
-                  </a>
+                  <Link rel="noopener noreferrer" href="#testimonials">
+                    Testimonials
+                  </Link>
                 </li>
                 <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Terms of Service
-                  </a>
+                  <Link rel="noopener noreferrer" href="#contact">
+                    Contact Us
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className="space-y-3">
-              <h3 className="uppercase dark:text-gray-50">Developers</h3>
+              <h3 className="uppercase dark:text-gray-50">Company Head</h3>
               <ul className="space-y-1">
                 <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Public API
-                  </a>
-                </li>
-                <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Documentation
-                  </a>
-                </li>
-                <li>
-                  <a rel="noopener noreferrer" href="#">
-                    Guides
-                  </a>
+                  <Link rel="noopener noreferrer" href="/founder">
+                    Our Founder
+                  </Link>
                 </li>
               </ul>
             </div>
