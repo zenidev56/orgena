@@ -7,13 +7,13 @@ const Faq = () => {
     {
       question: "What Should I Expect on My First Visit?",
       answer:
-        "On your first visit a licensed Physiotherapy  Will go over your medical history and screen your injury/ailment. The physical therapist will take baseline measurements of your strength, flexibility, and mobility to better determine a personalized plan of care with you. Often a brief treatment will also be provided on the first visit, and a home exercise plan will be developed when appropriate.",
+        "On your first visit a licensed Physiotherapy  Will go over your medical history and screen your injury/ailment. The physiotherapy will take baseline measurements of your strength, flexibility, and mobility to better determine a personalized plan of care with you. Often a brief treatment will also be provided on the first visit, and a home exercise plan will be developed when appropriate.",
     },
     {
       question:
-        "Must you have a referral from your physician to see a physical therapist?",
+        "Must you have a referral from your physician to see a physiotherapy?",
       answer:
-        "In the overwhelming majority of states you may seek the services of a physical therapist without a referral. If another health care provider refers you to Physiotherapy , keep in mind that you have the right to choose which physical therapist you would like to see.",
+        "In the overwhelming majority of states you may seek the services of a physiotherapy without a referral. If another health care provider refers you to Physiotherapy , keep in mind that you have the right to choose which physiotherapy you would like to see.",
     },
     {
       question:
@@ -34,12 +34,12 @@ const Faq = () => {
     {
       question: "How Often Will I Come to PhysioTherapy?",
       answer:
-        "Each injury is different, and each person's health history is unique. Typically, patients are in physiotherapy from a range of 10 days to 20 days in musculoskeletal conditions or 1-2 months in neurological conditions to regain function and return to their prior activities safely. Depending on severity of the disorder, a patient can expect to be seen 1-3 visits a week in the clinic to regain their function while simultaneously doing a personalized home exercise plan. For example, typical sprain and strains may take 4-6 weeks while post-surgical procedures may take 2-3 months to rehab, your physical therapist will work with your individual schedule to accommodate a plan that will facilitate healing and independence.",
+        "Each injury is different, and each person's health history is unique. Typically, patients are in physiotherapy from a range of 10 days to 20 days in musculoskeletal conditions or 1-2 months in neurological conditions to regain function and return to their prior activities safely. Depending on severity of the disorder, a patient can expect to be seen 1-3 visits a week in the clinic to regain their function while simultaneously doing a personalized home exercise plan. For example, typical sprain and strains may take 4-6 weeks while post-surgical procedures may take 2-3 months to rehab, your physiotherapy will work with your individual schedule to accommodate a plan that will facilitate healing and independence.",
     },
     {
       question: "How is My Progress Measured?",
       answer:
-        "Our physio therapists measure your baseline function at the start of care during your evaluation. Additionally, you will fill out a subjective questionnaire regarding your current function with activities of daily living. During subsequent visits, our doctor  will monitor and assess your progress with activities during treatment sessions and provide regular feedback to you. Midway through your plan of care, the physical therapist will often re-evaluate your function, update your Physiotherapy  goals, and provide a progress note to your referring physician. At the end of care, your physical therapist will re-assess your function, check your progress with your activities of daily living, and provide a note to your referring physician with your updated functional status.",
+        "Our physio therapists measure your baseline function at the start of care during your evaluation. Additionally, you will fill out a subjective questionnaire regarding your current function with activities of daily living. During subsequent visits, our doctor  will monitor and assess your progress with activities during treatment sessions and provide regular feedback to you. Midway through your plan of care, the physiotherapy will often re-evaluate your function, update your Physiotherapy  goals, and provide a progress note to your referring physician. At the end of care, your physiotherapy will re-assess your function, check your progress with your activities of daily living, and provide a note to your referring physician with your updated functional status.",
     },
     {
       question: "Will My Insurance Cover Physiotherapy ?",

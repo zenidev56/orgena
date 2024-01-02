@@ -18,9 +18,8 @@ const About = () => {
         </h1>
         <p className="about-description">
           Our company is dedicated to providing top-quality health care services
-          in physiotherapy and physical. With a team of experienced
-          professionals, we strive to help our clients achieve optimal wellness
-          and recovery.
+          in physiotherapy. With a team of experienced professionals, we strive
+          to help our clients achieve optimal wellness and recovery.
         </p>
       </div>
     </div>

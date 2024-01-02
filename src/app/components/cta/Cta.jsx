@@ -4,6 +4,7 @@ import React from "react";
 
 import CtaImage from "/public/contact.webp";
 import { Button } from "flowbite-react";
+import Link from "next/link";
 
 const Cta = () => {
   return (
@@ -39,9 +40,11 @@ const Cta = () => {
             >
               Subscribe
             </button> */}
-            <Button color="blue" className="py-1 px-2">
-              Click here to Book Appointment
-            </Button>
+            <Link href="/#contact">
+              <Button color="blue" className="py-1 px-2">
+                Click here to Book Appointment
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

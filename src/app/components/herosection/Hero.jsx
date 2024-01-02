@@ -23,12 +23,11 @@ const Hero = () => {
         <div className="hero">
           <div className="hero-text-box">
             <h1 className="heading-primary">
-              Providing Exceptional Physiotherapy and Care for All
+              Providing Exceptional Physiotherapy Care for All bodies
             </h1>
             <p className="hero-description">
               At our clinic, we offer personalized and effective Physiotherapy
-              and Physical services to help you achieve optimal health and
-              wellness.
+              services to help you achieve optimal health and wellness.
             </p>
             <div className="hero-action-btn">
               <Link href="#contact" className="btn btn--fill margin-right-btn">
