@@ -1,6 +1,7 @@
 import React from "react";
 
 import FounderImg from "/public/founder.jpg";
+import Head from "next/head";
 import Image from "next/image";
 
 import Cta from "../components/cta/Cta";
@@ -8,9 +9,34 @@ import Footer from "../components/footer/Footer";
 import Navbar from "../components/navbar/Navbar";
 import Statistics from "../components/statistics/Statistics";
 
+export const metadata = {
+  title: "Care Physio Founder - DR Julie Pawar",
+  description: `Graduated from Maharashtra University of Health Sciences,
+    Nashik Is been serving the health care sector since the year
+    2019 to present , has worked in renowned hospitals such as
+    Saifee Hospital - Bombay , BARC - Chembur , and also has 3
+    years of independent work experience in a clinic based setup ,
+    Has successfully handled Post Covid cases during the first &
+    second phase of covid , Uses various techniques such as
+    manipulation, taping, needling, MFR other than the basic
+    maneuver for faster and better recovery of Patients , known
+    for her happy nature & good patient handling skills`,
+  icons: {
+    icon: "/public/favicons.ico", // /public path
+  },
+};
+
 const Founder = () => {
   return (
     <div>
+      <Head>
+        <title>Care Physio Founder - DR Julie Pawar</title>
+        <meta
+          name="description"
+          content="Learn more about Care Physio and our commitment to holistic healing through personalized physiotherapy services."
+        />
+        <link rel="canonical" href="https://www.carephysio.in/founder" />
+      </Head>
       <Navbar />
       <section className="bg-white dark:bg-gray-900">
         <div className="relative flex">

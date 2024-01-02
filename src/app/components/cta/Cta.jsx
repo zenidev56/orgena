@@ -1,3 +1,4 @@
+"use client";
 import "./cta.css";
 
 import React from "react";

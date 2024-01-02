@@ -1,9 +1,10 @@
-import "./about.css";
+'use client'
+import './about.css';
 
-import React from "react";
+import React from 'react';
 
-import AboutImg from "/public/about.png";
-import Image from "next/image";
+import AboutImg from '/public/about.png';
+import Image from 'next/image';
 
 const About = () => {
   return (

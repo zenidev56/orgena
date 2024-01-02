@@ -1,3 +1,4 @@
+"use client";
 import "./testinomial.css";
 
 import React from "react";

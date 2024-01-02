@@ -26,8 +26,8 @@ const Hero = () => {
               Providing Exceptional Physiotherapy Care for All bodies
             </h1>
             <p className="hero-description">
-              At our clinic, we offer personalized and effective Physiotherapy
-              services to help you achieve optimal health and wellness.
+              Discover personalized physiotherapy services designed to relieve
+              pain, enhance mobility, and improve overall well-being.
             </p>
             <div className="hero-action-btn">
               <Link href="#contact" className="btn btn--fill margin-right-btn">

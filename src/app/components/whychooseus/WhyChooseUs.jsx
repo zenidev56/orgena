@@ -1,3 +1,4 @@
+"use client";
 import "./chooseus.css";
 
 import React from "react";

@@ -1,4 +1,5 @@
-import './statistics.css';
+"use client";
+import "./statistics.css";
 
 const Statistics = () => {
   return (
@@ -7,7 +8,9 @@ const Statistics = () => {
         <div className="text-center mb-5">
           <h2 className="text-4xl	font-bold">Over 1000+ Working Experience</h2>
           <p className="text-base font-medium mt-2 mb-2">
-          Elevate Your Healing Experience: Expertise, Modern Techniques, and Personalized Care. Prioritizing Your Well-being for Effective Recovery.
+            Elevate Your Healing Experience: Expertise, Modern Techniques, and
+            Personalized Care. Prioritizing Your Well-being for Effective
+            Recovery.
           </p>
         </div>
         <div className="stats-exp-container text-center">

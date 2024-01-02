@@ -1,3 +1,4 @@
+"use client";
 import "./footer.css";
 
 import React from "react";

@@ -1,3 +1,4 @@
+"use client";
 import "./services.css";
 
 import React, { Fragment } from "react";

@@ -1,3 +1,4 @@
+"use client";
 import "./faq.css";
 
 import React from "react";
