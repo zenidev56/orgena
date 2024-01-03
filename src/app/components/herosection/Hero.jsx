@@ -1,13 +1,12 @@
 "use client";
 
-import "./hero.css";
+import './hero.css';
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import HeroImage from "/public/Content.jpg";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
+import HeroImage from '/public/Content.jpg';
+import Image from 'next/image';
+import Link from 'next/link';
 
 ("use-client");
 
@@ -42,24 +41,12 @@ const Hero = () => {
             </div>
           </div>
           <div className="hero-img-box">
-            <motion.div
-              initial={false}
-              animate={
-                isLoaded && isInView
-                  ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
-                  : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
-              }
-              transition={{ duration: 1, delay: 1 }}
-              viewport={{ once: true }}
-              onViewportEnter={() => setIsInView(true)}
-            >
-              <Image
+            <Image
                 src={HeroImage}
                 alt="Woman enjoying food, meals in storage container, and food bowls on a table"
                 className="hero-img"
                 onLoad={() => setIsLoaded(true)}
               />
-            </motion.div>
           </div>
           <div className="delivered-meals">
             <div className="delivered-imgs">

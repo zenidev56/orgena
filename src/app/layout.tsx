@@ -7,10 +7,20 @@ import Script from 'next/script';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://carephysio.in'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+    },
+  },
+  openGraph: {
+    images: '/opengraph-image.jpg',
+  },
   title: 'Providing Exceptional Physiotherapy Care for All bodies',
   description: 'Discover personalized physiotherapy services designed to relieve pain, enhance mobility, and improve overall well-being.',
   icons: {
-    icon: '/public/favicons.ico', // /public path
+    icon: './favicon.ico', // /public path
   },
   keywords: "physiotherapy, physical therapy, rehabilitation, pain relief, sports injury, orthopedic care, musculoskeletal health, wellness, therapeutic exercise, injury prevention, mobility improvement, holistic healing, experienced physiotherapists, personalized care, health and fitness, Care Physio Mumbai, Care Physio Bhayander, Care Physio India,Care Physio Mira Road, Best in Thane, Best in Mira Road, Best in Dahisar ",
 }
