@@ -1,21 +1,25 @@
 "use client";
 
-import './hero.css';
+import "./hero.css";
 
-import React, { useState } from 'react';
+import React from "react";
 
-import HeroImage from '/public/Content.jpg';
-import Image from 'next/image';
-import Link from 'next/link';
+import HeroImage from "/public/Content.jpg";
+import Customer1 from "/public/customer/customer-1.jpg";
+import Customer2 from "/public/customer/customer-2.jpg";
+import Customer3 from "/public/customer/customer-3.jpg";
+import Customer4 from "/public/customer/customer-4.jpg";
+import Customer5 from "/public/customer/customer-5.jpg";
+import Customer6 from "/public/customer/customer-6.jpg";
+import Image from "next/image";
+import Link from "next/link";
 
 ("use-client");
 
-const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
-const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
+// const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
+// const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
 
 const Hero = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
   return (
     <div>
       <section className="section-hero">
@@ -42,38 +46,21 @@ const Hero = () => {
           </div>
           <div className="hero-img-box">
             <Image
-                src={HeroImage}
-                alt="Woman enjoying food, meals in storage container, and food bowls on a table"
-                className="hero-img"
-                onLoad={() => setIsLoaded(true)}
-              />
+              src={HeroImage}
+              alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+              className="hero-img"
+
+              // onLoad={() => setIsLoaded(true)}
+            />
           </div>
           <div className="delivered-meals">
             <div className="delivered-imgs">
-              <img
-                src="https://prayagtandon.github.io/Omnifood-Project/Hero-section/img/customers/customer-1.jpg"
-                alt="Customer photo"
-              />
-              <img
-                src="https://prayagtandon.github.io/Omnifood-Project/Hero-section/img/customers/customer-2.jpg"
-                alt="Customer photo"
-              />
-              <img
-                src="https://prayagtandon.github.io/Omnifood-Project/Hero-section/img/customers/customer-3.jpg"
-                alt="Customer photo"
-              />
-              <img
-                src="https://prayagtandon.github.io/Omnifood-Project/Hero-section/img/customers/customer-4.jpg"
-                alt="Customer photo"
-              />
-              <img
-                src="https://prayagtandon.github.io/Omnifood-Project/Hero-section/img/customers/customer-5.jpg"
-                alt="Customer photo"
-              />
-              <img
-                src="https://prayagtandon.github.io/Omnifood-Project/Hero-section/img/customers/customer-6.jpg"
-                alt="Customer photo"
-              />
+              <Image src={Customer1} alt="Customer photo 1" />
+              <Image src={Customer2} alt="Customer photo 2" />
+              <Image src={Customer3} alt="Customer photo 3" />
+              <Image src={Customer4} alt="Customer photo 4" />
+              <Image src={Customer5} alt="Customer photo 5" />
+              <Image src={Customer6} alt="Customer photo 6" />
             </div>
             <p className="delivered-text">
               <span>1000+</span>patients treated from last 3 years!
