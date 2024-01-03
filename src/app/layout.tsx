@@ -32,9 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en"  style={{scrollBehavior:'smooth'}}>
-      <Script src='https://kit.fontawesome.com/66eaecb2cd.js' />
       {/* <Script src='./node_modules/flowbite/dist/flowbite.min.js' /> */}
       <body className={inter.className}>{children}</body>
+      <Script src='https://kit.fontawesome.com/66eaecb2cd.js' />
     </html>
   )
 }
