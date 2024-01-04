@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: '/opengraph-image.jpg',
   },
-  title: 'Providing Exceptional Physiotherapy Care for All bodies',
+  title: 'Care Physiotherapy',
   description: 'Discover personalized physiotherapy services designed to relieve pain, enhance mobility, and improve overall well-being.',
   icons: {
     icon: './favicon.ico', // /public path

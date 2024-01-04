@@ -49,18 +49,18 @@ const Hero = () => {
               src={HeroImage}
               alt="Woman enjoying food, meals in storage container, and food bowls on a table"
               className="hero-img"
-
+              priority
               // onLoad={() => setIsLoaded(true)}
             />
           </div>
           <div className="delivered-meals">
             <div className="delivered-imgs">
-              <Image src={Customer1} alt="Customer photo 1" />
-              <Image src={Customer2} alt="Customer photo 2" />
-              <Image src={Customer3} alt="Customer photo 3" />
-              <Image src={Customer4} alt="Customer photo 4" />
-              <Image src={Customer5} alt="Customer photo 5" />
-              <Image src={Customer6} alt="Customer photo 6" />
+              <Image src={Customer1} alt="Customer photo 1" priority />
+              <Image src={Customer2} alt="Customer photo 2" priority />
+              <Image src={Customer3} alt="Customer photo 3" priority />
+              <Image src={Customer4} alt="Customer photo 4" priority />
+              <Image src={Customer5} alt="Customer photo 5" priority />
+              <Image src={Customer6} alt="Customer photo 6" priority />
             </div>
             <p className="delivered-text">
               <span>1000+</span>patients treated from last 3 years!
