@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: '/opengraph-image.jpg',
   },
-  title: 'Care Physiotherapy',
+  title: 'Care Physiotherapy - top physiotherapy in Mumbai',
   description: 'Discover personalized physiotherapy services designed to relieve pain, enhance mobility, and improve overall well-being.',
   icons: {
     icon: './favicon.ico', // /public path
