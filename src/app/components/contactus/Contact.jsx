@@ -61,6 +61,7 @@ const Contact = () => {
     }
   };
   const conditions = [
+    "Select your Conditions",
     "Neck Pain",
     "Sports injuries",
     "Vertigo",
@@ -77,6 +78,7 @@ const Contact = () => {
     "Concussion",
   ];
   const treatments = [
+    "Select your Treatment",
     "Electrical stimulation",
     "Ultrasound",
     "Manual therapy",
