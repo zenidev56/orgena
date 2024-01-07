@@ -43,6 +43,7 @@ export default function Home() {
                   <title>Care Physio Link</title>
                   <link rel="canonical" href="https://www.carephysio.in/" />
                   <link rel="canonical" href="https://www.carephysio.in/founder" />
+                  <meta property="og:image" content="./opengraph-image.jpg" />
                 </Head>
                 <Navbar />
                 <ToastContainer />

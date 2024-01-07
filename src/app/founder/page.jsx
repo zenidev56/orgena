@@ -37,6 +37,7 @@ const Founder = () => {
           name="description"
           content="Learn more about Care Physio and our commitment to holistic healing through personalized physiotherapy services."
         />
+        <meta property="og:image" content="./opengraph-image.jpg" />
         <link rel="canonical" href="https://www.carephysio.in/founder" />
       </Head>
       <Navbar />
