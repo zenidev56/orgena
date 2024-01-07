@@ -111,7 +111,7 @@
   color: var(--primary-text-color);
 }
 
-@media (max-width: 1105px) {
+@media (max-width: 1305px) {
   /*Mobile View */
   .mainHeader {
     padding: 0px;

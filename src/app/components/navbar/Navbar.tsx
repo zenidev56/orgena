@@ -76,14 +76,14 @@ const Navbar = () => {
               <Link href="#about">About Us</Link>
             </li>
             <li className={styles.option} onClick={closeMobileMenu}>
-              <Link href="#service">Conditions we Treat</Link>
+              <Link href="#services">Conditions we Treat</Link>
             </li>
             <li className={styles.option} onClick={closeMobileMenu}>
               <Link href="#choose-us">Why Choose Us</Link>
             </li>
-            <li className={`${styles.option}`} onClick={closeMobileMenu}>
+            {/* <li className={`${styles.option}`} onClick={closeMobileMenu}>
               <Link href="#case-studies">Case Studies</Link>
-            </li>
+            </li> */}
             <li className={`${styles.option} `} onClick={closeMobileMenu}>
               <Link href="#testimonials">Testimonials</Link>
             </li>

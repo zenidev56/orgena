@@ -13,8 +13,8 @@ import { ToastContainer } from 'react-toastify';
 
 import Hero from './components/herosection/Hero';
 import Navbar from './components/navbar/Navbar';
+import Loading from './loading';
 
-// const Hero = dynamic(() => import('./components/herosection/Hero'))
 const About = dynamic(() => import('./components/aboutus/About'))
 const Cta = dynamic(() => import('./components/cta/Cta'))
 const Faq = dynamic(() => import('./components/faq/Faq'))
@@ -30,38 +30,37 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log({ loading });
-
     setLoading(false);
   }, []);
 
   return (
     <>
-      <Fragment>
-        <main>
-          <Head>
-            <title>Care Physio Link</title>
-            <link rel="canonical" href="https://www.carephysio.in/" />
-            <link rel="canonical" href="https://www.carephysio.in/founder" />
-          </Head>
-          <Navbar />
-          <ToastContainer />
-          <Hero />
-          <About />
-          <WhyChooseUs />
-          <Statistics />
-          <Services />
-          <Testinomials />
-          <Contact />
-          <Cta />
-          <Faq />
-          <Footer />
-        </main>
-      </Fragment>
-      {/* {!loading ? (
+
+      {!loading ? (
+              <Fragment>
+              <main>
+                <Head>
+                  <title>Care Physio Link</title>
+                  <link rel="canonical" href="https://www.carephysio.in/" />
+                  <link rel="canonical" href="https://www.carephysio.in/founder" />
+                </Head>
+                <Navbar />
+                <ToastContainer />
+                <Hero />
+                <About />
+                <WhyChooseUs />
+                <Statistics />
+                <Services />
+                <Testinomials />
+                <Contact />
+                <Cta />
+                <Faq />
+                <Footer />
+              </main>
+            </Fragment>
       ) : (
         <Loading />
-      )} */}
+      )}
     </>
   );
 }

@@ -5,21 +5,22 @@ import React from "react";
 
 import { Avatar, Carousel } from "flowbite-react";
 import Image from "next/image";
+import Link from "next/link";
 
-import NishitaProfile from "../../../../public/nishita-profile.jpg";
-import AshishProfile from "../../../../public/profile2.png";
-import SnehaProfile from "../../../../public/sneha-profile.jpg";
-import VictoriaProfile from "../../../../public/victoria-profile.jpg";
-import ZoyaProfile from "../../../../public/zoya-profile.jpeg";
+import NishitaProfile from "../../../../public/customer/customer-1.jpg";
+import AshishProfile from "../../../../public/customer/customer-2.jpg";
+import SnehaProfile from "../../../../public/customer/customer-3.jpg";
+// import ZoyaProfile from "../../../../public/customer/customer-5.jpg";
+import VictoriaProfile from "../../../../public/customer/customer-6.jpg";
 
 const Testinomials = () => {
   const testinomials = [
-    {
-      description:
-        "I have experienced very good session.And Dr Julie was very excellent in all the manner.Almost my pain has gone.So a very thanks to Dr Julie.I wish all the best to ehr in future and god bless her.",
-      name: "Zoya Warsi",
-      img: ZoyaProfile,
-    },
+    // {
+    //   description:
+    //     "I have experienced very good session.And Dr Julie was very excellent in all the manner.Almost my pain has gone.So a very thanks to Dr Julie.I wish all the best to ehr in future and god bless her.",
+    //   name: "Zoya Warsi",
+    //   img: ZoyaProfile,
+    // },
     {
       description:
         "One of the best physiotherapist I've ever met. Perfect diagnosis. And excellent treatment. With her treatment my long term back and neck pain  But with her diagnosis and treatment now I can walk, run and do all the other activities. Highly recommended. ✌💯💐",
@@ -138,6 +139,13 @@ const Testinomials = () => {
             );
           })}
         </Carousel>
+        <Link
+          className="font-bold text-center mb-11 text-rose-600 mt-4"
+          target="_blank"
+          href="https://www.google.com/search?sca_esv=596346109&rlz=1C1ONGR_enIN982IN982&tbs=lf:1,lf_ui:2&tbm=lcl&sxsrf=AM9HkKmT1mJkMbyPPcq19WOXEkbESDHwrA:1704625001689&q=care+physiotherapy+mira+bhayandar&rflfq=1&num=10&sa=X&ved=2ahUKEwikp839jsuDAxXVgf0HHXCdADoQjGp6BAgdEAE&biw=1920&bih=919&dpr=1#lkt=LocalPoiReviews&rlfi=hd:;si:13567810612510002988,l,CiFjYXJlIHBoeXNpb3RoZXJhcHkgbWlyYSBiaGF5YW5kYXJInrSnwbmygIAIWi8QABABGAAYARgCGAMiIWNhcmUgcGh5c2lvdGhlcmFweSBtaXJhIGJoYXlhbmRhcpIBD3BoeXNpb3RoZXJhcGlzdJoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VOcGNYTnBRekozUlJBQqoBYxABKhYiEmNhcmUgcGh5c2lvdGhlcmFweSgAMiAQASIc10zcyYpblLojdHqStXArInzbvHLrOy4lVxgtijIlEAIiIWNhcmUgcGh5c2lvdGhlcmFweSBtaXJhIGJoYXlhbmRhcg;mv:[[19.305338499999998,72.8796751],[19.2700274,72.8507773]]"
+        >
+          Click to Check out more best reviews on Google
+        </Link>
       </div>
     </div>
   );

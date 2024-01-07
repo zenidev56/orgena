@@ -27,7 +27,7 @@
   margin-bottom: 1rem;
   font-size: 2rem;
 }
-@media (max-width: 1105px) {
+@media (max-width: 1305px) {
   .about-container {
     flex-direction: column-reverse;
   }
@@ -43,7 +43,7 @@
     margin-bottom: 1.5rem;
   }
 }
-@media (max-width: 1105px) {
+@media (max-width: 1305px) {
   .about-container {
     flex-direction: column-reverse;
     padding: 0rem 1rem;

@@ -15,7 +15,7 @@
 .service-description {
   font-size: var(--web-description-font-size);
   line-height: 1.5;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 .services-cards {
   display: flex;
@@ -23,6 +23,7 @@
   flex-wrap: 1;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 4rem;
 }
 .service-extra {
   font-weight: bold;
@@ -50,6 +51,7 @@
     font-size: var(--mobile-heading-font-size);
   }
   .service-description {
+    margin-bottom: 0rem;
     font-size: var(--mobile-description-font-size);
   }
   .services-cards {

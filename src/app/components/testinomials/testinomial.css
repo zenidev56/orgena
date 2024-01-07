@@ -39,6 +39,7 @@
 .carosel-container > div:last-child {
   right: 0.5rem;
 }
+
 @media (max-width: 500px) {
   .testinomial-container {
     padding: 0rem 1rem;

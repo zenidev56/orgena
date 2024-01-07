@@ -1,3 +1,6 @@
+.faq-container {
+  margin-bottom: 3rem;
+}
 .faq-primary {
   font-size: var(--web-primary-font-size);
   color: var(--primary-text-color);
@@ -19,9 +22,6 @@
 }
 
 @media (max-width: 500px) {
-  .faq-container {
-    margin-bottom: 2.5rem;
-  }
   .faq-primary {
     font-size: var(--mobile-heading-font-size);
   }
