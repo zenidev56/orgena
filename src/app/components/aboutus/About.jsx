@@ -1,10 +1,10 @@
-'use client'
-import './about.css';
+"use client";
+import "./about.css";
 
-import React from 'react';
+import React from "react";
 
-import AboutImg from '/public/about.png';
-import Image from 'next/image';
+import AboutImg from "/public/about.png";
+import Image from "next/image";
 
 const About = () => {
   return (
@@ -18,9 +18,9 @@ const About = () => {
           Experience the best in Physiotherapy and Physical care.
         </h1>
         <p className="about-description">
-          Our company is dedicated to providing top-quality health care services
+          Our Clinic is dedicated to providing top-quality health care services
           in physiotherapy. With a team of experienced professionals, we strive
-          to help our clients achieve optimal wellness and recovery.
+          to help our patients achieve optimal wellness and recovery.
         </p>
       </div>
     </div>

@@ -9,7 +9,7 @@ import Link from "next/link";
 
 import NishitaProfile from "../../../../public/customer/customer-1.jpg";
 import AshishProfile from "../../../../public/customer/customer-2.jpg";
-import SnehaProfile from "../../../../public/customer/customer-3.jpg";
+import GemiNadar from "../../../../public/customer/customer-3.jpg";
 // import ZoyaProfile from "../../../../public/customer/customer-5.jpg";
 import VictoriaProfile from "../../../../public/customer/customer-6.jpg";
 
@@ -28,10 +28,13 @@ const Testinomials = () => {
       img: AshishProfile,
     },
     {
-      description:
-        "I was suffering from bells pulsy from last 15 days..i came to to dr. Vigils clinic...Dr. Julie did a great job with my health issue. She explained everything to me in a very clear manner....she recover me in just a 15 days.... She was also kind and friendly. It was a great experience...I am happy with my treatmemt",
-      name: "Sneha Khedekar",
-      img: SnehaProfile,
+      description: `Truly Dr. Julie is one of the best physiotherapist I have ever met. I have been diagnosed with frozen shoulder for a while and have been visiting number of physiotherapist around my area until I discovered C.A.R.E Physiotherapy Clinic.
+
+      Throughout the treatment process, Dr. Julie demonstrated a remarkable ability to explain complex concepts in a clear and accessible manner. She ensured I understood the goals of each session and the rationale behind the prescribed exercises, empowering me to actively participate in my own recovery.
+      
+      I would definitely recommend whoever is looking for physiotherapy session atleast to visit once and experience.`,
+      name: "Yogendra Singh",
+      img: GemiNadar,
     },
     {
       description:

@@ -107,7 +107,7 @@ const Location = () => {
                 Phone
               </h2>
               <p className="mt-2 text-gray-500 dark:text-gray-400">
-                Mon-Sat from 9am to 2pm and 5pm to 9pm.
+                Mon-Sat from 9am to 1pm and 5:30pm to 9:30pm.
               </p>
               <p className="mt-2 text-blue-500 dark:text-blue-400">
                 +91 9920877138

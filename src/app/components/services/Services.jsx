@@ -7,6 +7,7 @@ import AnkyImg from "/public/ankylosing-spondylitis.jpg";
 import BellPalsyImg from "/public/bells-palsy.jpg";
 import CarpelImg from "/public/carpal tunnel.jpg";
 import FrozenShoulderImg from "/public/frozen-shoulder.jpg";
+import { Card } from "flowbite-react";
 
 import FlippableCard from "../flippablecard/FlippableCard";
 
@@ -69,6 +70,21 @@ const Services = () => {
       image: FrozenShoulderImg,
     },
   ];
+  const extraConditions = [
+    "Coccydynia",
+    "Guillain Barre Syndrome (GBS)",
+    "Osteoarthritis",
+    "Osteoporosis",
+    "Parkinson",
+    " Plantar fasciitis",
+    "Rheumatoid arthritis",
+    "Spondylolisthesis",
+    "Spinal canal stenosis",
+    "Spondylosis",
+    "Tennis elbow",
+    "Stroke - paralysis",
+    "Trigger finger",
+  ];
   return (
     <div id="services" className="services-container">
       <div className="services-heading">
@@ -95,6 +111,51 @@ const Services = () => {
           );
         })}
       </div>
+      {/* <Card className="max-w-sm">
+        <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          Other Conditions we Treat
+        </h5>
+        <p className="font-normal text-gray-700 dark:text-gray-400">
+          <span className="text-l font-bold tracking-tight text-gray-900 dark:text-white">
+            Why it hurts:
+          </span>{" "}
+        </p>
+      </Card> */}
+      <Card width="300px" className="m-auto w-[300px]">
+        <p className="text-center text-xl font-medium ">
+          Other Condition we treat
+        </p>
+        <div className="flex flex-col justify-center items-center mb-6">
+          <ol className="text-left">
+            {extraConditions.map((condition) => {
+              return (
+                <>
+                  <li className="font-normal text-gray-700 dark:text-gray-400 flex justify-start items-center mb-2">
+                    <span className="w-[15px] h-[15px] mr-4 ">
+                      <svg
+                        class="w-4 h-4 text-gray-800 dark:text-white"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 8 14"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m1 13 5.7-5.326a.909.909 0 0 0 0-1.348L1 1"
+                        />
+                      </svg>
+                    </span>
+                    {condition}
+                  </li>
+                </>
+              );
+            })}
+          </ol>
+        </div>
+      </Card>
       <p className="service-extra">
         We support people at all stages of life to recover from injury, reduce
         pain and stiffness, increase mobility and movement and maximise function

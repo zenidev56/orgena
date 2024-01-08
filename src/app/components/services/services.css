@@ -23,14 +23,13 @@
   flex-wrap: 1;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 4rem;
 }
 .service-extra {
   font-weight: bold;
   color: var(--primary-color);
   text-align: justify;
   font-size: var(--mobile-description-font-size);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 @media (max-width: 1038px) {
   .services-container {
@@ -40,6 +39,9 @@
   .services-cards {
     flex-direction: column;
     gap: 2rem;
+  }
+  .service-extra {
+    margin-bottom: 4rem;
   }
 }
 @media (max-width: 500px) {
@@ -56,5 +58,8 @@
   }
   .services-cards {
     gap: 2rem;
+  }
+  .service-extra {
+    margin-bottom: 12rem;
   }
 }
