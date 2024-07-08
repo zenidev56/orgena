@@ -31,7 +31,7 @@
   font-size: var(--mobile-description-font-size);
   margin-bottom: 2rem;
 }
-@media (max-width: 1038px) {
+@media (max-width: 1400px) {
   .services-container {
     padding: 0rem 1rem;
     margin-bottom: 3.4rem;
@@ -40,11 +40,8 @@
     flex-direction: column;
     gap: 2rem;
   }
-  .service-extra {
-    margin-bottom: 4rem;
-  }
 }
-@media (max-width: 500px) {
+@media (max-width: 1038px) {
   .services-container {
     padding: 0rem 1rem;
     margin-bottom: 5.5rem;

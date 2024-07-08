@@ -121,7 +121,7 @@ const Services = () => {
           </span>{" "}
         </p>
       </Card> */}
-      <Card width="300px" className="m-auto w-[300px]">
+      <Card width="300px" className="m-auto w-[100%] max-w-[400px]">
         <p className="text-center text-xl font-medium ">
           Other Condition we treat
         </p>
@@ -156,7 +156,7 @@ const Services = () => {
           </ol>
         </div>
       </Card>
-      <p className="service-extra">
+      <p className="service-extra mt-2">
         We support people at all stages of life to recover from injury, reduce
         pain and stiffness, increase mobility and movement and maximise function
         and quality of life

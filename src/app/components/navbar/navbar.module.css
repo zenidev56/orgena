@@ -8,6 +8,7 @@
   height: 80px;
   z-index: 5;
   position: relative;
+  margin-bottom: 1rem;
 }
 .secondaryHeader {
   background-color: #fff;
@@ -72,7 +73,7 @@
   font-weight: bold;
 }
 .option :hover {
-  color: var(--white-color);
+  color: var(--black-color);
 }
 .contactContainer {
   display: flex;
@@ -111,7 +112,7 @@
   color: var(--primary-text-color);
 }
 
-@media (max-width: 1305px) {
+@media (max-width: 1700px) {
   /*Mobile View */
   .mainHeader {
     padding: 0px;

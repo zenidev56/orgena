@@ -52,14 +52,14 @@ function SimpleCard({
                 </li>
               );
             })}
-          </ul>
+          </ul>ß
         </Card>
       </div>
       <div className="card-front">
         <Card
           className="max-w-sm"
           renderImage={() => (
-            <Image width={500} height={500} src={image} alt="image 1" />
+            <Image  width={500} height={"250px"} src={image} alt="image 1" />
           )}
         >
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

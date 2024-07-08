@@ -54,7 +54,7 @@ const WhyChooseUs = () => {
   return (
     <div id="choose-us" className="choose-container">
       <h1 className="choose-primary">Why Choose US</h1>
-      <p className="choose-description mb-5">
+      <p className="choose-description mb-7">
         Choose us for top-notch physiotherapy. Our skilled team delivers
         personalized care with modern techniques, prioritizing your well-being.
         Regain mobility and alleviate pain with our dedicated approach to your

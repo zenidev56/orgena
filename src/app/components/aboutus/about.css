@@ -27,23 +27,28 @@
   margin-bottom: 1rem;
   font-size: 2rem;
 }
-@media (max-width: 1305px) {
+@media (max-width: 1700px) {
   .about-container {
     flex-direction: column-reverse;
+    padding: 0 3.2rem;
   }
   .about-info {
     width: 100%;
   }
   .about-primary {
     font-size: var(--web-heading-font-size);
-    margin-bottom: 1.5rem;
+    color: var(--primary-text-color);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1.05;
+    margin-bottom: 1rem;
   }
   .about-description {
     font-size: var(--web-description-font-size);
     margin-bottom: 1.5rem;
   }
 }
-@media (max-width: 1305px) {
+@media (max-width: 500px) {
   .about-container {
     flex-direction: column-reverse;
     padding: 0rem 1rem;
